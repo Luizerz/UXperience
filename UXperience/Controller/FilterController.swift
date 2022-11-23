@@ -1,0 +1,74 @@
+//
+//  FilterController.swift
+//  UXperience
+//
+//  Created by Luiz Sena on 23/11/22.
+//
+
+import UIKit
+
+class FilterController: UIViewController {
+
+    let nameArray: [String] = ["Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"]
+    
+    private lazy var filterView: UICollectionView = {
+        let collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: .init()
+        )
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(
+            UINib(
+                nibName: "FilterCollectionViewCell",
+                bundle: nil
+            ),
+            forCellWithReuseIdentifier: "filterCell"
+        )
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSubViews()
+        filterViewConstraints()
+    }
+
+    private func addSubViews() {
+        self.view.addSubview(filterView)
+    }
+
+    private func filterViewConstraints() {
+
+        NSLayoutConstraint.activate([
+            filterView.topAnchor.constraint(equalTo: view.topAnchor),
+            filterView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            filterView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            filterView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
+    }
+}
+
+
+extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return nameArray.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("item \(indexPath.row + 1)")
+    }
+
+}

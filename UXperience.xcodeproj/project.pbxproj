@@ -22,6 +22,8 @@
 		4F7A21AB292E596200000F05 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21A9292E596200000F05 /* FilterCollectionViewCell.swift */; };
 		4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */; };
 		4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */; };
+		4F7A21B1292E5D8400000F05 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B0292E5D8400000F05 /* Service.swift */; };
+		4F7A21B4292E5D9500000F05 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B3292E5D9500000F05 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		4F7A21A9292E596200000F05 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenViewController+ViewCode.swift"; sourceTree = "<group>"; };
+		4F7A21B0292E5D8400000F05 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4F7A21B3292E5D9500000F05 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		4F39C82A292CFF8200DDD8AE /* UXperience */ = {
 			isa = PBXGroup;
 			children = (
+				4F7A21AF292E5D7000000F05 /* Service */,
 				4F7A2199292E3AE800000F05 /* Others */,
 				4F7A219A292E3AF500000F05 /* Controller */,
 				4F7A219B292E3AFE00000F05 /* View */,
@@ -173,8 +178,17 @@
 		4F7A219C292E3B1400000F05 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4F7A21B3292E5D9500000F05 /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4F7A21AF292E5D7000000F05 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4F7A21B0292E5D8400000F05 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,11 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7A21B4292E5D9500000F05 /* ViewModel.swift in Sources */,
 				4F7A21A8292E53B400000F05 /* CardCollectionViewController.swift in Sources */,
 				4F7A21A0292E3F2300000F05 /* FilterController.swift in Sources */,
 				4F39C830292CFF8200DDD8AE /* MainScreenViewController.swift in Sources */,
 				4F39C82C292CFF8200DDD8AE /* AppDelegate.swift in Sources */,
 				4F39C82E292CFF8200DDD8AE /* SceneDelegate.swift in Sources */,
+				4F7A21B1292E5D8400000F05 /* Service.swift in Sources */,
 				4F7A21AB292E596200000F05 /* FilterCollectionViewCell.swift in Sources */,
 				4F39C836292CFF8200DDD8AE /* UXperience.xcdatamodeld in Sources */,
 				4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */,

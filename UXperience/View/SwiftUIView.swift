@@ -17,6 +17,9 @@ public struct SwiftUIView: View {
     private func flipCard () {
         isFlipped = !isFlipped
         if isFlipped {
+            SoundManager.instance.playSound(with: "cardFlipSound")
+            let feedBack = UIImpactFeedbackGenerator()
+            feedBack.impactOccurred()
             withAnimation(.linear(duration: 0.3)) {
                 backCardAmount = 90
             }
@@ -24,6 +27,9 @@ public struct SwiftUIView: View {
                 frontCardAmount = 0
             }
         } else {
+            SoundManager.instance.playSound(with: "cardFlipSound")
+            let feedBack = UIImpactFeedbackGenerator()
+            feedBack.impactOccurred()
             withAnimation(.linear(duration: 0.3)) {
                 frontCardAmount = -90
             }
@@ -44,6 +50,19 @@ public struct SwiftUIView: View {
         .onTapGesture {
             flipCard()
         }
+        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+            .onEnded(
+                { value in
+                    if value.translation.width < 0 {
+                        flipCard()
+                    }
+
+                    if value.translation.width > 0 {
+                        flipCard()
+                    }
+                }
+            )
+        )
     }
 }
 

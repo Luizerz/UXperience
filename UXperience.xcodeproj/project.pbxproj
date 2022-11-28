@@ -25,6 +25,8 @@
 		4F7A21B1292E5D8400000F05 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B0292E5D8400000F05 /* Service.swift */; };
 		4F7A21B4292E5D9500000F05 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B3292E5D9500000F05 /* DetailViewModel.swift */; };
 		4F7DC7022930DF29005A8184 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DC7012930DF29005A8184 /* SwiftUIView.swift */; };
+		4F7DC70429310BAF005A8184 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DC70329310BAF005A8184 /* SoundManager.swift */; };
+		4F7DC70729310D8E005A8184 /* cardFlipSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F7DC70629310D8E005A8184 /* cardFlipSound.mp3 */; };
 		4FBC3644292F92FD007044F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3643292F92FD007044F9 /* DetailViewController.swift */; };
 		4FBC3646292F932C007044F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3645292F932C007044F9 /* DetailView.swift */; };
 		4FBC3649292FA6AA007044F9 /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */; };
@@ -71,6 +73,8 @@
 		4F7A21B0292E5D8400000F05 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4F7A21B3292E5D9500000F05 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4F7DC7012930DF29005A8184 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		4F7DC70329310BAF005A8184 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		4F7DC70629310D8E005A8184 /* cardFlipSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cardFlipSound.mp3; path = ../../../../../../Downloads/cardFlipSound.mp3; sourceTree = "<group>"; };
 		4FBC3643292F92FD007044F9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FBC3645292F932C007044F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		4F39C82A292CFF8200DDD8AE /* UXperience */ = {
 			isa = PBXGroup;
 			children = (
+				4F7DC70529310D4F005A8184 /* Sounds */,
 				4F7A21AF292E5D7000000F05 /* Service */,
 				4F7A2199292E3AE800000F05 /* Others */,
 				4F7A219A292E3AF500000F05 /* Controller */,
@@ -202,8 +207,17 @@
 			isa = PBXGroup;
 			children = (
 				4F7A21B0292E5D8400000F05 /* Service.swift */,
+				4F7DC70329310BAF005A8184 /* SoundManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4F7DC70529310D4F005A8184 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4F7DC70629310D8E005A8184 /* cardFlipSound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +327,7 @@
 				4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */,
 				4F39C83B292CFF8300DDD8AE /* LaunchScreen.storyboard in Resources */,
 				4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */,
+				4F7DC70729310D8E005A8184 /* cardFlipSound.mp3 in Resources */,
 				4F39C838292CFF8300DDD8AE /* Assets.xcassets in Resources */,
 				4F39C833292CFF8200DDD8AE /* Main.storyboard in Resources */,
 			);
@@ -353,6 +368,7 @@
 				4F7A21AB292E596200000F05 /* FilterCollectionViewCell.swift in Sources */,
 				4F39C836292CFF8200DDD8AE /* UXperience.xcdatamodeld in Sources */,
 				4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */,
+				4F7DC70429310BAF005A8184 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

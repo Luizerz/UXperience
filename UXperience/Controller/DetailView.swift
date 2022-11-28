@@ -28,6 +28,7 @@ class DetailView: UIView {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = true
         tableView.register(UINib(nibName: "NewsCellTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.isScrollEnabled = false
         return tableView
     }()
 
@@ -74,15 +75,18 @@ class DetailView: UIView {
 extension DetailView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 2
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "cell",
             for: indexPath
         ) as? NewsCellTableViewCell else { return UITableViewCell() }
+            // codigo para mudar a cor do item selecionado na tableview
+//        let backgroundView = UIView()
+//        backgroundView.backgroundColor = UIColor.orange
+//        cell.selectedBackgroundView = backgroundView
         return cell
     }
 
@@ -90,6 +94,7 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
         print(indexPath) // -> selecao da news
         if let url = URL(string: "https://www.hackingwithswift.com") {
             UIApplication.shared.open(url)
+            tableView.deselectRow(at: indexPath, animated: false)
         }
     }
 

@@ -16,5 +16,4 @@ struct DetailViewModel {
     func configureNewsLabel(with label: UILabel)  {
         label.text = self.newsLabel
     }
-
 }

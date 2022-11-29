@@ -28,6 +28,7 @@ class SoundManager {
         }
 
     }
+    
     private init(player: AVAudioPlayer? = nil) {
         self.player = player
     }

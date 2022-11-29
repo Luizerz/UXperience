@@ -31,6 +31,8 @@
 		4FBC3646292F932C007044F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3645292F932C007044F9 /* DetailView.swift */; };
 		4FBC3649292FA6AA007044F9 /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */; };
 		4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBC3648292FA6AA007044F9 /* NewsCellTableViewCell.xib */; };
+		A16F663E2934DEEA001D2796 /* LawsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F663D2934DEEA001D2796 /* LawsModel.swift */; };
+		A16F66402934DF6F001D2796 /* laws.json in Resources */ = {isa = PBXBuildFile; fileRef = A16F663F2934DF6F001D2796 /* laws.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		4FBC3645292F932C007044F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		4FBC3648292FA6AA007044F9 /* NewsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCellTableViewCell.xib; sourceTree = "<group>"; };
+		A16F663D2934DEEA001D2796 /* LawsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawsModel.swift; sourceTree = "<group>"; };
+		A16F663F2934DF6F001D2796 /* laws.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laws.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		4F39C82A292CFF8200DDD8AE /* UXperience */ = {
 			isa = PBXGroup;
 			children = (
+				A16F663C2934DECB001D2796 /* Model */,
 				4F7DC70529310D4F005A8184 /* Sounds */,
 				4F7A21AF292E5D7000000F05 /* Service */,
 				4F7A2199292E3AE800000F05 /* Others */,
@@ -218,6 +223,15 @@
 				4F57837B2934DC6600F01DDA /* cardFlipSound.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A16F663C2934DECB001D2796 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A16F663F2934DF6F001D2796 /* laws.json */,
+				A16F663D2934DEEA001D2796 /* LawsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */,
+				A16F66402934DF6F001D2796 /* laws.json in Resources */,
 				4F39C83B292CFF8300DDD8AE /* LaunchScreen.storyboard in Resources */,
 				4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */,
 				4F57837C2934DC6600F01DDA /* cardFlipSound.mp3 in Resources */,
@@ -356,6 +371,7 @@
 			files = (
 				4FBC3644292F92FD007044F9 /* DetailViewController.swift in Sources */,
 				4FBC3646292F932C007044F9 /* DetailView.swift in Sources */,
+				A16F663E2934DEEA001D2796 /* LawsModel.swift in Sources */,
 				4F7A21B4292E5D9500000F05 /* DetailViewModel.swift in Sources */,
 				4F7A21A8292E53B400000F05 /* CardCollectionViewController.swift in Sources */,
 				4F7A21A0292E3F2300000F05 /* FilterController.swift in Sources */,

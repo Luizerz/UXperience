@@ -12,23 +12,24 @@ class CardCollectionViewController: UIViewController {
     private lazy var cardView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero,
-            collectionViewLayout: .init()
+            collectionViewLayout: UICollectionViewLayout.init()
         )
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(
             UINib(
-                nibName: "CardCell",
+                nibName: "CardCollectionViewCell",
                 bundle: nil
             ),
-            forCellWithReuseIdentifier: "cardCell"
+            forCellWithReuseIdentifier: "cell"
         )
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .vertical
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        collectionView.setCollectionViewLayout(layout, animated: true)
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        collectionView.backgroundColor = .none
+        
         return collectionView
     }()
 
@@ -36,7 +37,6 @@ class CardCollectionViewController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         cardSetViewContratins()
-
     }
 
     private func addSubViews() {
@@ -54,14 +54,22 @@ class CardCollectionViewController: UIViewController {
     }
 }
 
-extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "cell",
+            for: indexPath
+        ) as? CardCollectionViewCell else { return UICollectionViewCell() }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 120, height: 120)
     }
 
 }

@@ -121,12 +121,6 @@
    },
    {
       "categoria":"Cognitive Bias",
-      "titulo":"",
-      "resumo":"",
-      "leiaMais":""
-   },
-   {
-      "categoria":"Cognitive Bias",
       "titulo":"Efeito Zeigarnik",
       "resumo":"O Efeito Zeigarnik explica que tarefas incompletas são mais fáceis de lembrar do que as bem-sucedidas. Então ter recursos visuais que representem a incompletude da tarefa é fundamental para ajudar a enfatizar a tensão específica da tarefa e encorajar o usuário a se lembrar da tarefa. Barras de progresso, círculos, marcas de seleção ou indicadores de etapas são excelentes maneiras de indicar quando uma tarefa foi concluída. Além disso, você sabe, quanto mais sentimentos positivos seu usuário associar ao seu produto, maior a probabilidade de ele voltar.",
       "leiaMais":"https://uxdesign.cc/endowed-progress-effect-give-your-users-a-head-start-97d52d8b0396"

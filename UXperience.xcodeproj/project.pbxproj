@@ -24,6 +24,9 @@
 		4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */; };
 		4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */; };
 		4F7A21B1292E5D8400000F05 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B0292E5D8400000F05 /* Service.swift */; };
+		4F7A21B4292E5D9500000F05 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B3292E5D9500000F05 /* ViewModel.swift */; };
+		D19DE0482930DF490090324B /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DE0462930DF490090324B /* CardCollectionViewCell.swift */; };
+		D19DE0492930DF490090324B /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19DE0472930DF490090324B /* CardCollectionViewCell.xib */; };
 		4F7A21B4292E5D9500000F05 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A21B3292E5D9500000F05 /* DetailViewModel.swift */; };
 		4F7DC7022930DF29005A8184 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DC7012930DF29005A8184 /* SwiftUIView.swift */; };
 		4F7DC70429310BAF005A8184 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DC70329310BAF005A8184 /* SoundManager.swift */; };
@@ -74,6 +77,9 @@
 		4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenViewController+ViewCode.swift"; sourceTree = "<group>"; };
 		4F7A21B0292E5D8400000F05 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4F7A21B3292E5D9500000F05 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D19DE0462930DF490090324B /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		D19DE0472930DF490090324B /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F7A21B3292E5D9500000F05 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4F7DC7012930DF29005A8184 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4F7DC70329310BAF005A8184 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 				4F7A21A9292E596200000F05 /* FilterCollectionViewCell.swift */,
 				4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */,
 				4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */,
+				D19DE0462930DF490090324B /* CardCollectionViewCell.swift */,
+				D19DE0472930DF490090324B /* CardCollectionViewCell.xib */,
 				4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */,
 				4FBC3648292FA6AA007044F9 /* NewsCellTableViewCell.xib */,
 				4F7DC7012930DF29005A8184 /* SwiftUIView.swift */,
@@ -341,6 +349,7 @@
 				4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */,
 				A16F66402934DF6F001D2796 /* laws.json in Resources */,
 				4F39C83B292CFF8300DDD8AE /* LaunchScreen.storyboard in Resources */,
+				D19DE0492930DF490090324B /* CardCollectionViewCell.xib in Resources */,
 				4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */,
 				4F57837C2934DC6600F01DDA /* cardFlipSound.mp3 in Resources */,
 				4F39C838292CFF8300DDD8AE /* Assets.xcassets in Resources */,
@@ -375,6 +384,7 @@
 				4F7A21B4292E5D9500000F05 /* DetailViewModel.swift in Sources */,
 				4F7A21A8292E53B400000F05 /* CardCollectionViewController.swift in Sources */,
 				4F7A21A0292E3F2300000F05 /* FilterController.swift in Sources */,
+				D19DE0482930DF490090324B /* CardCollectionViewCell.swift in Sources */,
 				4FBC3649292FA6AA007044F9 /* NewsCellTableViewCell.swift in Sources */,
 				4F39C830292CFF8200DDD8AE /* MainScreenViewController.swift in Sources */,
 				4F39C82C292CFF8200DDD8AE /* AppDelegate.swift in Sources */,

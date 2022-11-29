@@ -25,5 +25,4 @@ class ReadJsonLaws {
         return nil
     }
     
-    private init() {}
 }

@@ -9,9 +9,13 @@ import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lawName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func configureLawName(with newText: String) {
+        lawName.text = newText
+    }
 }

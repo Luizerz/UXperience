@@ -137,8 +137,7 @@
 		4F39C82A292CFF8200DDD8AE /* UXperience */ = {
 			isa = PBXGroup;
 			children = (
-				A16F663C2934DECB001D2796 /* Model */,
-				4F7DC70529310D4F005A8184 /* Sounds */,
+				4FC7BC312936520300E7C108 /* Protocol */,
 				4F7A21AF292E5D7000000F05 /* Service */,
 				4F7A2199292E3AE800000F05 /* Others */,
 				4F7A219A292E3AF500000F05 /* Controller */,
@@ -209,6 +208,7 @@
 		4F7A219C292E3B1400000F05 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A16F663C2934DECB001D2796 /* Model */,
 				4F7A21B3292E5D9500000F05 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
@@ -217,6 +217,7 @@
 		4F7A21AF292E5D7000000F05 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4F7DC70529310D4F005A8184 /* Sounds */,
 				D12241D329378ED200A59DCC /* ReadJsonLaws.swift */,
 				4F7DC70329310BAF005A8184 /* SoundManager.swift */,
 			);
@@ -229,6 +230,13 @@
 				4F57837B2934DC6600F01DDA /* cardFlipSound.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		4FC7BC312936520300E7C108 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		A16F663C2934DECB001D2796 /* Model */ = {

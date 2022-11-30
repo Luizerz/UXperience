@@ -11,24 +11,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="UXperience" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="171" height="222"/>
+            <rect key="frame" x="0.0" y="0.0" width="160" height="220"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="171" height="222"/>
+                <rect key="frame" x="0.0" y="0.0" width="160" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTa-jd-yRY">
-                        <rect key="frame" x="0.0" y="0.0" width="171" height="222"/>
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="220"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k9E-cz-nUm">
-                                <rect key="frame" x="0.0" y="0.0" width="171" height="154.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="159.33333333333334"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mm7-1W-oKt">
-                                <rect key="frame" x="0.0" y="154.66666666666666" width="171" height="67.333333333333343"/>
+                                <rect key="frame" x="0.0" y="159.33333333333334" width="160" height="60.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lei de Proximidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-RC-1Z1">
-                                        <rect key="frame" x="9" y="23" width="152" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lei de Proximidade" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-RC-1Z1">
+                                        <rect key="frame" x="9" y="10" width="141" height="40.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -36,16 +36,18 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xoH-RC-1Z1" secondAttribute="bottom" constant="24" id="8bz-fJ-vAY"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xoH-RC-1Z1" secondAttribute="bottom" constant="10" id="8bz-fJ-vAY"/>
+                                    <constraint firstItem="xoH-RC-1Z1" firstAttribute="centerY" secondItem="mm7-1W-oKt" secondAttribute="centerY" id="9zb-Uk-Aqu"/>
                                     <constraint firstItem="xoH-RC-1Z1" firstAttribute="leading" secondItem="mm7-1W-oKt" secondAttribute="leading" constant="9" id="BFj-Rc-YYe"/>
                                     <constraint firstAttribute="trailing" secondItem="xoH-RC-1Z1" secondAttribute="trailing" constant="10" id="gWS-kp-tLk"/>
-                                    <constraint firstItem="xoH-RC-1Z1" firstAttribute="top" secondItem="mm7-1W-oKt" secondAttribute="top" constant="23" id="nMU-ZW-sXP"/>
+                                    <constraint firstItem="xoH-RC-1Z1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mm7-1W-oKt" secondAttribute="top" constant="10" id="nMU-ZW-sXP"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="k9E-cz-nUm" firstAttribute="leading" secondItem="OTa-jd-yRY" secondAttribute="leading" id="EzT-06-hVs"/>
+                            <constraint firstAttribute="width" constant="160" id="InZ-7O-LFM"/>
                             <constraint firstAttribute="bottom" secondItem="mm7-1W-oKt" secondAttribute="bottom" id="SqG-DN-6VI"/>
                             <constraint firstItem="k9E-cz-nUm" firstAttribute="height" secondItem="mm7-1W-oKt" secondAttribute="height" multiplier="3.2" priority="700" id="VD6-CV-Mz2"/>
                             <constraint firstItem="k9E-cz-nUm" firstAttribute="top" secondItem="OTa-jd-yRY" secondAttribute="top" id="VO8-Yz-iwk"/>
@@ -70,7 +72,7 @@
                     <integer key="value" value="11"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="67.938931297709928" y="41.549295774647888"/>
+            <point key="canvasLocation" x="67.175572519083971" y="41.549295774647888"/>
         </collectionViewCell>
     </objects>
     <resources>

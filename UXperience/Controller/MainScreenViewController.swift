@@ -13,6 +13,7 @@ class MainScreenViewController: UIViewController {
 
     private(set) var filterView = FilterController()
     private(set) var cardCollectionView = CardCollectionViewController()
+    private var detailViewModel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class MainScreenViewController: UIViewController {
         searchBar.obscuresBackgroundDuringPresentation = false
         searchBar.searchBar.placeholder = "Procurar Lei"
         navigationItem.searchController = searchBar
+        cardCollectionView.viewModel = detailViewModel
+        cardCollectionView.delegate = self
 
         // MARK: - TODO: trocar por protocolo ViewCode
         addSubviews()
@@ -30,7 +33,19 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("funfou")
+        detailViewModel.filterJson(with: searchController.searchBar.text ?? "")
+        cardCollectionView.cardView.reloadData()
     }
 }
 
+protocol CardCollectionViewDelegate: AnyObject {
+    func teste(with viewModel: LawsModel)
+}
+
+extension MainScreenViewController: CardCollectionViewDelegate {
+    func teste(with viewModel: LawsModel) {
+        let rootView = DetailViewController()
+        rootView.detailViewModel = viewModel
+        navigationController?.pushViewController(rootView, animated: true)
+    }
+}

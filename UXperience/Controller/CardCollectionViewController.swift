@@ -71,6 +71,7 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         let feedBack = UISelectionFeedbackGenerator()
         feedBack.selectionChanged()
         delegate?.teste(with: viewModel.uxLaws[indexPath.row])
+
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -86,7 +87,10 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 120)
+        return CGSize(width: 160, height: 220)
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
 }

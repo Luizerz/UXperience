@@ -11,6 +11,7 @@ class ReadJsonLaws {
     
     static let instance = ReadJsonLaws()
     
+
     func loadjson() -> [LawsModel] {
         if let url = Bundle.main.url(forResource: "laws", withExtension: "json") {
             do {
@@ -22,6 +23,7 @@ class ReadJsonLaws {
                 print("error:\(error)")
             }
         }
+
         return [LawsModel(categoria: Categoria.cognitiveBias, titulo: "", resumo: "", leiaMais: "")]
     }
 }

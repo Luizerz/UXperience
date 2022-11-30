@@ -9,16 +9,26 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    private var detailViewModel: DetailViewModel = DetailViewModel()
+    var detailViewModel: LawsModel?
 
     private let detailView: DetailView = {
         let view = DetailView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        detailView.delegate = self
         self.view = detailView
+    }
+}
+
+extension DetailViewController: DetailViewDelegate {
+    func titleOfNews() -> String {
+        return detailViewModel!.titulo
+    }
+
+    func goToWebSite() -> String {
+        let url = detailViewModel!.leiaMais
+        return url
     }
 }

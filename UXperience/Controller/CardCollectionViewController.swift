@@ -9,7 +9,10 @@ import UIKit
 
 class CardCollectionViewController: UIViewController {
 
-    private lazy var cardView: UICollectionView = {
+    var viewModel: DetailViewModel!
+    weak var delegate: CardCollectionViewDelegate?
+
+    lazy var cardView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero,
             collectionViewLayout: UICollectionViewLayout.init()
@@ -29,6 +32,7 @@ class CardCollectionViewController: UIViewController {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.backgroundColor = .none
+        collectionView.showsVerticalScrollIndicator = false
         
         return collectionView
     }()
@@ -37,6 +41,7 @@ class CardCollectionViewController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         cardSetViewContratins()
+
     }
 
     private func addSubViews() {
@@ -57,14 +62,26 @@ class CardCollectionViewController: UIViewController {
 extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+
+        return viewModel.uxLaws.count // <- fazer um guard let ou um if let
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(viewModel.uxLaws[indexPath.row].titulo) // selecionador da collection
+        let feedBack = UISelectionFeedbackGenerator()
+        feedBack.selectionChanged()
+        delegate?.teste(with: viewModel.uxLaws[indexPath.row])
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "cell",
             for: indexPath
-        ) as? CardCollectionViewCell else { return UICollectionViewCell() }
+        ) as? CardCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configureLawName(with: viewModel.uxLaws[indexPath.row].titulo)
         return cell
     }
     

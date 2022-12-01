@@ -9,26 +9,31 @@ import UIKit
 
 class CardCollectionViewController: UIViewController {
 
-    private lazy var cardView: UICollectionView = {
+    var viewModel: DetailViewModel!
+    weak var delegate: CardCollectionViewDelegate?
+
+    lazy var cardView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero,
-            collectionViewLayout: .init()
+            collectionViewLayout: UICollectionViewLayout.init()
         )
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(
             UINib(
-                nibName: "CardCell",
+                nibName: "CardCollectionViewCell",
                 bundle: nil
             ),
-            forCellWithReuseIdentifier: "cardCell"
+            forCellWithReuseIdentifier: "cell"
         )
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .vertical
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        collectionView.setCollectionViewLayout(layout, animated: true)
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        collectionView.backgroundColor = .none
+        collectionView.showsVerticalScrollIndicator = false
+        
         return collectionView
     }()
 
@@ -54,14 +59,38 @@ class CardCollectionViewController: UIViewController {
     }
 }
 
-extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CardCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+
+        return viewModel.uxLaws.count // <- fazer um guard let ou um if let
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(viewModel.uxLaws[indexPath.row].titulo) // selecionador da collection
+        let feedBack = UISelectionFeedbackGenerator()
+        feedBack.selectionChanged()
+        delegate?.teste(with: viewModel.uxLaws[indexPath.row])
+
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "cell",
+            for: indexPath
+        ) as? CardCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configureLawName(with: viewModel.uxLaws[indexPath.row].titulo)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 160, height: 220)
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
 }

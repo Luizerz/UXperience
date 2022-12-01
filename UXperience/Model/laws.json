@@ -1,7 +1,7 @@
 [
    {
       "categoria":"heuristica",
-      "titulo":"Efeito de usabilidade estética",
+      "titulo":"Efeito de Usabilidade Estética",
       "resumo":"Um design agradável cria uma resposta positiva no cérebro das pessoas e as leva a acreditar que o design realmente funciona melhor. As pessoas são mais tolerantes com pequenos problemas de usabilidade quando o design de um produto ou serviço tem uma estética agradável. O design visualmente agradável pode esconder problemas de usabilidade e evitar que problemas sejam descobertos durante o teste de usabilidade.  A usabilidade e a estética são os dois fatores mais importantes na avaliação da experiência geral do usuário para um aplicativo. Elas são julgadas pelas expectativas de reutilização de um usuário e, em seguida, seu julgamento final pós-uso ou experiente. O estilo cognitivo de um usuário pode influenciar como eles interagem e percebem um aplicativo, o que, por sua vez, pode influenciar seu julgamento sobre o aplicativo.",
       "leiaMais":"https://www.nngroup.com/articles/aesthetic-usability-effect/"
    },
@@ -13,7 +13,7 @@
    },
    {
       "categoria":"heuristica",
-      "titulo":"Efeito gradiente de objectivos",
+      "titulo":"Efeito Gradiente de Objectivos",
       "resumo":"A tendência de se aproximar de um objetivo aumenta com a proximidade do objetivo.Quanto mais próximos os usuários estiverem de concluir uma tarefa, mais rápido eles trabalharão para alcançá-la. Fornecer a sensação de progresso em direção a uma meta ajudará a garantir que os usuários tenham mais motivação para concluir essa tarefa. Forneça uma indicação clara do progresso para motivar os usuários a concluir as tarefas.",
       "leiaMais":"https://medium.com/choice-hacking/how-uber-uses-psychology-to-perfect-their-customer-experience-d6c440285029"
    },
@@ -85,7 +85,7 @@
    },
    {
       "categoria":"gestalt",
-      "titulo":"Lei da concisão",
+      "titulo":"Lei da Concisão",
       "resumo":"As pessoas vão perceber e interpretar imagens ambíguas ou complexas como a forma mais simples possível, porque é a interpretação que exige o menor esforço cognitivo de nós. Portanto, a lei da concisão nos diz que as pessoas percebem as coisas complexas como formas simplistas para reconhecer facilmente o ambiente. Isso faz com que os humanos entendam o que veem como um todo, e não como pequenos pedaços ou a soma total das partes.",
       "leiaMais":"https://www.interaction-design.org/literature/article/the-laws-of-figure-ground-praegnanz-closure-and-common-fate-gestalt-principles-3"
    },
@@ -103,13 +103,13 @@
    },
    {
       "categoria":"Cognitive Bias",
-      "titulo":"Regra de fim de pico",
+      "titulo":"Regra de Fim de Pico",
       "resumo":"As pessoas julgam uma experiência em grande parte com base em como se sentiram no auge e no final, em vez da soma total ou média de cada momento da experiência. Peak-End Rule é uma regra psicológica em que uma experiência é lembrada e avaliada com base no ponto máximo (mais intenso) da experiência e/ou no final da experiência.",
       "leiaMais":"https://uxdesign.cc/peak-end-rule-54eedd375c4d"
    },
    {
       "categoria":"Cognitive Bias",
-      "titulo":"Efeito de posição serial",
+      "titulo":"Efeito de Posição Serial",
       "resumo":"O efeito de posição serial, descreve como a posição de um item em uma sequência afeta a precisão da recordação. Os dois conceitos envolvidos, o efeito de primazia e o efeito de recência, explicam como os itens apresentados no início e no final de uma sequência são lembrados com maior precisão do que os itens no meio de uma lista. A manipulação do efeito de posição serial para criar melhores experiências de usuário é refletida em muitos designs populares de empresas de sucesso.",
       "leiaMais":"https://www.interaction-design.org/literature/article/serial-position-effect-how-to-create-better-user-interfaces"
    },

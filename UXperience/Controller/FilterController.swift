@@ -11,6 +11,8 @@ class FilterController: UIViewController {
 
     let nameArray: [String] = ["Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"]
     
+    var selectedIndexPaths = [IndexPath]()
+    
     private lazy var filterView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero,
@@ -63,12 +65,17 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
+        cell.label.text = "\(nameArray[indexPath.row])"
+        
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("item \(indexPath.row + 1)")
+        let cell = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
+        cell.backgroundFilterView.backgroundColor = .systemIndigo
+        
     }
 
 }

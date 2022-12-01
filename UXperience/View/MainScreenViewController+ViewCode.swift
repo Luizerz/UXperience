@@ -27,10 +27,10 @@ extension MainScreenViewController {
             filterView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             filterView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-            cardCollectionView.view.topAnchor.constraint(equalTo: filterView.view.bottomAnchor),
-            cardCollectionView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-            cardCollectionView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
-            cardCollectionView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            cardCollectionView.view.topAnchor.constraint(equalTo: filterView.view.bottomAnchor, constant: 15),
+            cardCollectionView.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            cardCollectionView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            cardCollectionView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
         ])
     }
 

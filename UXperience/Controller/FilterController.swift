@@ -33,6 +33,7 @@ class FilterController: UIViewController {
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.setCollectionViewLayout(layout, animated: true)
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
 

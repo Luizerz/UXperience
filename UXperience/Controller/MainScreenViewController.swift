@@ -18,6 +18,8 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.hidesSearchBarWhenScrolling = false
+
         searchBar.searchResultsUpdater = self
         searchBar.obscuresBackgroundDuringPresentation = false
         searchBar.searchBar.placeholder = "Procurar Lei"

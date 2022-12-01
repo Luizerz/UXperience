@@ -20,6 +20,7 @@ class FilterController: UIViewController {
         )
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.allowsMultipleSelection = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(
             UINib(
@@ -78,5 +79,11 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         cell.backgroundFilterView.backgroundColor = .systemIndigo
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+            let cell = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
+            cell.backgroundFilterView.backgroundColor = nil
+
+        }
 
 }

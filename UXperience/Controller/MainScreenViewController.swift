@@ -46,8 +46,7 @@ protocol CardCollectionViewDelegate: AnyObject {
 
 extension MainScreenViewController: CardCollectionViewDelegate {
     func teste(with viewModel: LawsModel) {
-        let rootView = DetailViewController()
-        rootView.detailViewModel = viewModel
+        let rootView = DetailViewController(detailViewModel: viewModel)
         navigationController?.pushViewController(rootView, animated: true)
     }
 }

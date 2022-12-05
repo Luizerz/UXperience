@@ -16,6 +16,11 @@ class DetailViewController: UIViewController {
         return view
     }()
 
+    convenience init(detailViewModel: LawsModel) {
+        self.init()
+        self.detailViewModel = detailViewModel
+    }
+
     override func loadView() {
         detailView.delegate = self
         self.view = detailView
@@ -23,6 +28,15 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewDelegate {
+
+    func setFrontCardTitle() -> String {
+        return detailViewModel!.titulo
+    }
+
+    func setFrontCardText() -> String {
+        return detailViewModel!.resumo
+    }
+
     func titleOfNews() -> String {
         return detailViewModel!.titulo
     }

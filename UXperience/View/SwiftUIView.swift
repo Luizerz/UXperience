@@ -14,6 +14,9 @@ public struct SwiftUIView: View {
     @State private var backCardAmount = 90.0
     @State private var isFlipped: Bool = true
 
+    public var textFrontCard: String?
+    public var titleFrontCard: String?
+
     private func flipCard () {
         isFlipped = !isFlipped
         if isFlipped {
@@ -43,7 +46,7 @@ public struct SwiftUIView: View {
 
     public var body: some View {
         ZStack{
-            frontCard(animationAmount: $frontCardAmount)
+            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Resume", title: titleFrontCard ?? "Error Title")
             backCard(animationAmount: $backCardAmount)
         }
         .ignoresSafeArea()
@@ -68,8 +71,10 @@ public struct SwiftUIView: View {
 
 public struct frontCard: View {
     @Binding var animationAmount: Double
+    var text: String
+    var title: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: "frontCard")
+        newView(animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 }
@@ -77,7 +82,7 @@ public struct frontCard: View {
 public struct backCard: View {
     @Binding var animationAmount: Double
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: "backCard")
+        newView(animationAmount: animationAmount, stringText: "backCard", isFront: false)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -87,6 +92,8 @@ public struct newView: View {
 
     @State var animationAmount = 0.0
     var stringText: String?
+    var isFront: Bool
+    var stringTitle: String?
 
     let gradient = Gradient(
         colors: [
@@ -116,12 +123,62 @@ public struct newView: View {
                         gradient: gradient,
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing))
-//                    .overlay{
-//                        RoundedRectangle(cornerRadius: 20)
-//                            .stroke(Color.gray, lineWidth: 0.6)
-//                    }
 
-                Text(stringText ?? "Error ao inicializar a stringText \(#function)")
+                if isFront {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Image("UXperience_icon")
+                                .resizable()
+                                .frame(width: 50,height: 50)
+                                .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                            Text(stringTitle ?? "Error")
+                                .font(Font.system(size: 18, weight: .heavy))
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                        }
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text(stringText ?? "Error ao inicializar a stringText \(#function)")
+                                .font(Font.system(size: 16, weight: .medium))
+                            Spacer()
+                        }
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Image("flipLogo")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                        }
+                        Spacer()
+                    }
+                }
+                else {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Image("UXperience_icon")
+                                .resizable()
+                                .frame(width: 50,height: 50)
+                                .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                            Text("Nome da Lei")
+                                .font(Font.system(size: 18, weight: .heavy))
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                        }
+                        Spacer()
+                        Image("wrong")
+                        Image("right")
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Image("flipLogo")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                        }
+                        Spacer()
+                    }
+                }
+
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

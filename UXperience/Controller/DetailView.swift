@@ -11,15 +11,19 @@ import SwiftUI
 class DetailView: UIView {
 
     weak var delegate: DetailViewDelegate!
+    private var textValue: String = ""
+    private var titleValue: String = ""
+
+
 
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Leia mais sobre"
         label.textColor = UIColor(named: "newsTitleColor")
-//        label.backgroundColor = .blue
         return label
     }()
+
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -37,19 +41,27 @@ class DetailView: UIView {
 
     convenience init() {
         self.init(frame: .zero)
-        setLayout()
         self.backgroundColor = UIColor(named: "background")
         tableView.flashScrollIndicators()
+
     }
 
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        textValue = delegate.setFrontCardText()
+        titleValue = delegate.setFrontCardTitle()
+        setLayout()
+    }
     private func setLayout() {
 
         let swiftUIView = UIHostingConfiguration {
-            SwiftUIView()
+            var view = SwiftUIView()
+            view.textFrontCard = self.textValue
+            view.titleFrontCard = self.titleValue
+            return view
         }.makeContentView()
 
         swiftUIView.translatesAutoresizingMaskIntoConstraints = false
-//        swiftUIView.backgroundColor = .systemRed
         self.addSubview(swiftUIView)
         self.addSubview(titleLabel)
         self.addSubview(tableView)
@@ -86,14 +98,14 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let myText = delegate.titleOfNews()
+        let myText = delegate!.titleOfNews()
         cell.configureNewsTitle(with: myText)
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url: String = delegate!.goToWebSite() 
+        let url: String = delegate!.goToWebSite()
         print(indexPath) // -> selecao da news
         if let url = URL(string: url) {
             UIApplication.shared.open(url)
@@ -102,5 +114,3 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
     }
 
 }
-
-

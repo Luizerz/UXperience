@@ -10,4 +10,5 @@ import Foundation
 protocol DetailViewDelegate: AnyObject {
     func goToWebSite()-> String
     func titleOfNews()-> String
-}
+    func setFrontCardTitle()-> String
+    func setFrontCardText()-> String

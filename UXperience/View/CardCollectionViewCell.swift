@@ -25,7 +25,7 @@ class CardCollectionViewCell: UICollectionViewCell {
 
         self.cardView.layer.shadowRadius = 5
         self.cardView.layer.shadowColor = UIColor(named: "cardShadowColor")?.cgColor
-        self.cardView.layer.shadowOpacity = 0.94
+        self.cardView.layer.shadowOpacity = 0.35
         self.cardView.layer.shadowOffset = .init(width: 0, height: 0)
 
 

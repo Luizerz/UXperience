@@ -40,9 +40,7 @@ extension MainScreenViewController: UISearchResultsUpdating {
     }
 }
 
-protocol CardCollectionViewDelegate: AnyObject {
-    func teste(with viewModel: LawsModel)
-}
+
 
 extension MainScreenViewController: CardCollectionViewDelegate {
     func teste(with viewModel: LawsModel) {

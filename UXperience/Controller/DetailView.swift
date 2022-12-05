@@ -103,7 +103,4 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-protocol DetailViewDelegate: AnyObject {
-    func goToWebSite()-> String
-    func titleOfNews()-> String
-}
+

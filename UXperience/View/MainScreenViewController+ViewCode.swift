@@ -29,8 +29,8 @@ extension MainScreenViewController {
 
             cardCollectionView.view.topAnchor.constraint(equalTo: filterView.view.bottomAnchor, constant: 15),
             cardCollectionView.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            cardCollectionView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            cardCollectionView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            cardCollectionView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            cardCollectionView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
         ])
     }
 

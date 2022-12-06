@@ -8,11 +8,23 @@
 import Foundation
 import UIKit
 
+protocol ViewModelBinding: AnyObject {
+    func reloadCollection()
+}
+
 class DetailViewModel {
+
+    weak var binding: ViewModelBinding? = nil
 
     // virá da camada service
     let newsLabel: String = "Artigo Medium"
-    var uxLaws = ReadJsonLaws().loadjson()
+
+    var uxLaws = ReadJsonLaws().loadjson() {
+        didSet {
+            binding?.reloadCollection()
+        }
+    }
+
     var filterdJson: [LawsModel] = []
 
     func configureNewsLabel(with label: UILabel)  {

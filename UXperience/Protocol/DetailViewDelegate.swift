@@ -12,4 +12,3 @@ protocol DetailViewDelegate: AnyObject {
     func titleOfNews()-> String
     func setFrontCardTitle()-> String
     func setFrontCardText()-> String
-}

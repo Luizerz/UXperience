@@ -28,6 +28,7 @@ class MainScreenViewController: UIViewController {
         navigationItem.searchController = searchBar
         cardCollectionView.viewModel = detailViewModel
         cardCollectionView.delegate = self
+        filterView.delegate = self
 
         // MARK: - TODO: trocar por protocolo ViewCode
         addSubviews()
@@ -50,6 +51,12 @@ extension MainScreenViewController: CardCollectionViewDelegate {
     }
 }
 
+extension MainScreenViewController: FilterCollectionViewDelegate {
+    func getFilterByCategory(with labelText: String) {
+        detailViewModel.getFilterByCategory(with: labelText)
+        cardCollectionView.cardView.reloadData()
+    }
+    
 // Data Binding
 extension MainScreenViewController: ViewModelBinding {
     func reloadCollection() {

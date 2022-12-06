@@ -119,28 +119,28 @@
       "asset":"Lei_Da_Conectividade_Uniforme"
    },
    {
-      "categoria":"Cognitive Bias",
+      "categoria":"Vies Cognitivo",
       "titulo":"Regra de Fim de Pico",
       "resumo":"As pessoas julgam uma experiência em grande parte com base em como se sentiram no auge e no final, em vez da soma total ou média de cada momento da experiência. Peak-End Rule é uma regra psicológica em que uma experiência é lembrada e avaliada com base no ponto máximo (mais intenso) da experiência e/ou no final da experiência.",
       "leiaMais":"https://uxdesign.cc/peak-end-rule-54eedd375c4d",
       "asset":"Regra_De_Pico_Final"
    },
    {
-      "categoria":"Cognitive Bias",
+      "categoria":"Vies Cognitivo",
       "titulo":"Efeito de Posição Serial",
       "resumo":"O efeito de posição serial, descreve como a posição de um item em uma sequência afeta a precisão da recordação. Os dois conceitos envolvidos, o efeito de primazia e o efeito de recência, explicam como os itens apresentados no início e no final de uma sequência são lembrados com maior precisão do que os itens no meio de uma lista. A manipulação do efeito de posição serial para criar melhores experiências de usuário é refletida em muitos designs populares de empresas de sucesso.",
       "leiaMais":"https://www.interaction-design.org/literature/article/serial-position-effect-how-to-create-better-user-interfaces",
       "asset":"Efeito_De_Posicao_Serial"
    },
    {
-      "categoria":"Cognitive Bias",
+      "categoria":"Vies Cognitivo",
       "titulo":"Efeito Von Restorff",
       "resumo":"O efeito Von Restorff, também conhecido como Efeito de Isolamento, prevê que, quando vários objetos semelhantes estão presentes, aquele que difere do resto tem maior probabilidade de ser lembrado. A teoria foi definida pelo psiquiatra e pediatra alemão Hedwig von Restorff, que, em seu estudo de 1933, descobriu que, quando os participantes recebiam uma lista de itens categoricamente semelhantes com um item distinto e isolado na lista, a memória para o item foi melhorado.",
       "leiaMais":"https://blog.marvelapp.com/psychology-principles-every-uiux-designer-needs-know/",
       "asset":"Efeito_Von_Restorff"
    },
    {
-      "categoria":"Cognitive Bias",
+      "categoria":"Vies Cognitivo",
       "titulo":"Efeito Zeigarnik",
       "resumo":"O Efeito Zeigarnik explica que tarefas incompletas são mais fáceis de lembrar do que as bem-sucedidas. Então ter recursos visuais que representem a incompletude da tarefa é fundamental para ajudar a enfatizar a tensão específica da tarefa e encorajar o usuário a se lembrar da tarefa. Barras de progresso, círculos, marcas de seleção ou indicadores de etapas são excelentes maneiras de indicar quando uma tarefa foi concluída. Além disso, você sabe, quanto mais sentimentos positivos seu usuário associar ao seu produto, maior a probabilidade de ele voltar.",
       "leiaMais":"https://uxdesign.cc/endowed-progress-effect-give-your-users-a-head-start-97d52d8b0396",

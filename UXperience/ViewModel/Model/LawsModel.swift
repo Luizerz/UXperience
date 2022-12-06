@@ -14,7 +14,7 @@ struct LawsModel: Codable {
 }
 
 enum Categoria: String, Codable {
-    case cognitiveBias = "Cognitive Bias"
+    case cognitiveBias = "Vies Cognitivo"
     case gestalt = "gestalt"
     case heuristica = "heuristica"
     case principio = "principio"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496825FE293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496825FD293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift */; };
 		4F1325A9293E1388006E5800 /* CardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */; };
 		4F1325AC293E13BD006E5800 /* DetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */; };
 		4F39C82C292CFF8200DDD8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39C82B292CFF8200DDD8AE /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		496825FD293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
 		4F39C828292CFF8200DDD8AE /* UXperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,7 @@
 			children = (
 				4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */,
 				4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */,
+				496825FD293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				4F7A21AB292E596200000F05 /* FilterCollectionViewCell.swift in Sources */,
 				4F1325AC293E13BD006E5800 /* DetailViewDelegate.swift in Sources */,
 				4F39C836292CFF8200DDD8AE /* UXperience.xcdatamodeld in Sources */,
+				496825FE293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift in Sources */,
 				4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */,
 				4F7DC70429310BAF005A8184 /* SoundManager.swift in Sources */,
 			);

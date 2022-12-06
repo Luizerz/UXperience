@@ -8,10 +8,12 @@
 import UIKit
 
 class FilterController: UIViewController {
+    weak var delegate: FilterCollectionViewDelegate?
 
-    let nameArray: [String] = ["Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"]
+    let nameArray: [String] = ["Todos", "Heuristica", "Principio", "Gestalt", "Vies Cognitivo"]
     
     var selectedIndexPaths = [IndexPath]()
+
     
     private lazy var filterView: UICollectionView = {
         let collectionView = UICollectionView(
@@ -20,7 +22,7 @@ class FilterController: UIViewController {
         )
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.allowsMultipleSelection = true
+        collectionView.allowsMultipleSelection = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(
             UINib(
@@ -69,21 +71,17 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         cell.label.text = "\(nameArray[indexPath.row])"
-        
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("item \(indexPath.row + 1)")
         let cell = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
         cell.backgroundFilterView.backgroundColor = .systemIndigo
-        
+        delegate?.getFilterByCategory(with: cell.label.text ?? "Error")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
             let cell = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
             cell.backgroundFilterView.backgroundColor = nil
-
         }
-
 }

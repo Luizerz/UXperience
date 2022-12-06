@@ -11,6 +11,7 @@ struct LawsModel: Codable {
     let categoria: Categoria
     let titulo, resumo: String
     let leiaMais: String
+    let asset: String
 }
 
 enum Categoria: String, Codable {

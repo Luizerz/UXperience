@@ -126,15 +126,14 @@ public struct newView: View {
 
                 if isFront {
                     VStack {
-                        Spacer()
                         HStack {
                             Image("UXperience_icon")
                                 .resizable()
                                 .frame(width: 50,height: 50)
-                                .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                                .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
                             Text(stringTitle ?? "Error")
                                 .font(Font.system(size: 18, weight: .heavy))
-                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                                .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()
                         }
                         Spacer()
@@ -142,6 +141,7 @@ public struct newView: View {
                             Spacer()
                             Text(stringText ?? "Error ao inicializar a stringText \(#function)")
                                 .font(Font.system(size: 16, weight: .medium))
+                                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
                             Spacer()
                         }
                         Spacer()
@@ -155,15 +155,14 @@ public struct newView: View {
                 }
                 else {
                     VStack {
-                        Spacer()
                         HStack {
                             Image("UXperience_icon")
                                 .resizable()
                                 .frame(width: 50,height: 50)
-                                .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                                .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
                             Text("Nome da Lei")
                                 .font(Font.system(size: 18, weight: .heavy))
-                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                                .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()
                         }
                         Spacer()

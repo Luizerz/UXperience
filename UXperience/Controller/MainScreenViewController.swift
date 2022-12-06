@@ -18,6 +18,8 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        detailViewModel.binding = self
+
         navigationItem.hidesSearchBarWhenScrolling = false
 
         searchBar.searchResultsUpdater = self
@@ -37,11 +39,10 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         detailViewModel.filterJson(with: searchController.searchBar.text ?? "")
-        cardCollectionView.cardView.reloadData()
+        // Sem Data Binding
+        // cardCollectionView.cardView.reloadData()
     }
 }
-
-
 
 extension MainScreenViewController: CardCollectionViewDelegate {
     func teste(with viewModel: LawsModel) {
@@ -56,4 +57,9 @@ extension MainScreenViewController: FilterCollectionViewDelegate {
         cardCollectionView.cardView.reloadData()
     }
     
+// Data Binding
+extension MainScreenViewController: ViewModelBinding {
+    func reloadCollection() {
+        cardCollectionView.cardView.reloadData()
+    }
 }

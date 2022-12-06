@@ -24,10 +24,9 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.cardView.clipsToBounds = false
 
         self.cardView.layer.shadowRadius = 5
-        self.cardView.layer.shadowColor = UIColor(named: "cardShadowColor")?.cgColor
-        self.cardView.layer.shadowOpacity = 0.94
-        self.cardView.layer.shadowOffset = .init(width: 0, height: 0)
-
+        self.cardView.layer.shadowColor = UIColor(named: "cardShadowColor 1")?.cgColor
+        self.cardView.layer.shadowOpacity = 1
+        self.cardView.layer.shadowOffset = .init(width: 0, height: 3)
 
         let cornerRadius = 15.0
 
@@ -38,10 +37,15 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.labelBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         self.labelBackgroundView.layer.cornerRadius = cornerRadius
         self.labelBackgroundView.clipsToBounds = true
+//        self.labelBackgroundView.layer.borderColor = UIColor(named: "cardShadowColor 1")?.cgColor
+//        self.labelBackgroundView.layer.borderWidth = 5
 
     }
 
     func configureLawName(with newText: String) {
         lawName.text = newText
+    }
+    func configureImage(with newImage: String) {
+        lawImageView.image = UIImage(named: newImage)
     }
 }

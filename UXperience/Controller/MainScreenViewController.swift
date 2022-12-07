@@ -56,6 +56,7 @@ extension MainScreenViewController: FilterCollectionViewDelegate {
         detailViewModel.getFilterByCategory(with: labelText)
         cardCollectionView.cardView.reloadData()
     }
+}
     
 // Data Binding
 extension MainScreenViewController: ViewModelBinding {

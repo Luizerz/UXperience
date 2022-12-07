@@ -46,8 +46,8 @@ public struct SwiftUIView: View {
 
     public var body: some View {
         ZStack{
-            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Resume", title: titleFrontCard ?? "Error Title")
-            backCard(animationAmount: $backCardAmount)
+            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title")
+            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title")
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -81,8 +81,9 @@ public struct frontCard: View {
 
 public struct backCard: View {
     @Binding var animationAmount: Double
+    var title: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: "backCard", isFront: false)
+        newView(animationAmount: animationAmount, isFront: false, stringTitle: title)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -160,7 +161,7 @@ public struct newView: View {
                                 .resizable()
                                 .frame(width: 50,height: 50)
                                 .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
-                            Text("Nome da Lei")
+                            Text(stringTitle ?? "Error")
                                 .font(Font.system(size: 18, weight: .heavy))
                                 .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()

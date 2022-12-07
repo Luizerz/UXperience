@@ -15,6 +15,7 @@ protocol ViewModelBinding: AnyObject {
 class DetailViewModel {
 
     weak var binding: ViewModelBinding? = nil
+    var filterdJson: [LawsModel] = []
 
     // virá da camada service
     let newsLabel: String = "Artigo Medium"
@@ -25,9 +26,6 @@ class DetailViewModel {
         }
     }
 
-    var filterdJson: [LawsModel] = []
-    
-    
     func getFilterByCategory(with labelText: String) {
         let json = ReadJsonLaws.instance.loadjson()
         switch labelText {
@@ -40,6 +38,7 @@ class DetailViewModel {
                 }
             }
             self.uxLaws = heuristica
+
             
         case "Principio":
             var principio: [LawsModel] = []
@@ -79,10 +78,6 @@ class DetailViewModel {
         label.text = self.newsLabel
     }
     
-    func printJSON() {
-        print(uxLaws)
-    }
-    
     func filterJson(with filterString: String) {
         let uxLaws = ReadJsonLaws().loadjson()
         filterdJson = []
@@ -97,9 +92,4 @@ class DetailViewModel {
             self.uxLaws = self.filterdJson
         }
     }
-    
-    // Falta Implementar!! vai recebrer a categoria e tem que atualizar o modelo filterdJson com o modelo filtrado
-//    func filterJsonByCategory(category filter: String) -> [LawsModel] {
-//
-//    }
 }

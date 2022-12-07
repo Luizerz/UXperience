@@ -42,6 +42,12 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     }
 
+    override func prepareForReuse() {
+        self.lawImageView.image = nil
+        self.lawName.text = nil
+        super.prepareForReuse()
+    }
+
     func configureLawName(with newText: String) {
         lawName.text = newText
     }

@@ -16,6 +16,7 @@ public struct SwiftUIView: View {
 
     public var textFrontCard: String?
     public var titleFrontCard: String?
+    public var imageURL: String?
 
     private func flipCard () {
         isFlipped = !isFlipped
@@ -46,8 +47,8 @@ public struct SwiftUIView: View {
 
     public var body: some View {
         ZStack{
-            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title")
-            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title")
+            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
+            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -73,8 +74,9 @@ public struct frontCard: View {
     @Binding var animationAmount: Double
     var text: String
     var title: String
+    var imageString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title)
+        newView(animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title, imageString: imageString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 }
@@ -82,8 +84,9 @@ public struct frontCard: View {
 public struct backCard: View {
     @Binding var animationAmount: Double
     var title: String
+    var imageString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, isFront: false, stringTitle: title)
+        newView(animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -95,6 +98,7 @@ public struct newView: View {
     var stringText: String?
     var isFront: Bool
     var stringTitle: String?
+    var imageString: String?
 
     let gradient = Gradient(
         colors: [
@@ -128,7 +132,7 @@ public struct newView: View {
                 if isFront {
                     VStack {
                         HStack {
-                            Image("UXperience_icon")
+                            Image(imageString!)
                                 .resizable()
                                 .frame(width: 50,height: 50)
                                 .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
@@ -157,7 +161,7 @@ public struct newView: View {
                 else {
                     VStack {
                         HStack {
-                            Image("UXperience_icon")
+                            Image(imageString!)
                                 .resizable()
                                 .frame(width: 50,height: 50)
                                 .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))

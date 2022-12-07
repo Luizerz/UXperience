@@ -45,4 +45,8 @@ extension DetailViewController: DetailViewDelegate {
         let url = detailViewModel!.leiaMais
         return url
     }
+
+    func setImageOfCar() -> String {
+        return  detailViewModel!.asset
+    }
 }

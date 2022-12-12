@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewDelegate {
+    func setImageExemple() -> String {
+        return detailViewModel!.exemplo
+    }
+
 
     func setFrontCardTitle() -> String {
         return detailViewModel!.titulo

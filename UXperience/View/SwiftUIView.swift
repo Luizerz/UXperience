@@ -17,6 +17,7 @@ public struct SwiftUIView: View {
     public var textFrontCard: String?
     public var titleFrontCard: String?
     public var imageURL: String?
+    public var exemploURL: String?
 
     private func flipCard () {
         isFlipped = !isFlipped
@@ -48,7 +49,7 @@ public struct SwiftUIView: View {
     public var body: some View {
         ZStack{
             frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
-            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
+            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -85,8 +86,9 @@ public struct backCard: View {
     @Binding var animationAmount: Double
     var title: String
     var imageString: String
+    var exemploString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString)
+        newView(animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -99,6 +101,7 @@ public struct newView: View {
     var isFront: Bool
     var stringTitle: String?
     var imageString: String?
+    var exemploString: String?
 
     let gradient = Gradient(
         colors: [
@@ -171,8 +174,7 @@ public struct newView: View {
                             Spacer()
                         }
                         Spacer()
-                        Image("wrong")
-                        Image("right")
+                        Image(exemploString ?? "")
                         Spacer()
                         HStack{
                             Spacer()

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CardCollectionViewDelegate: AnyObject {
-    func teste(with viewModel: LawsModel)
+    func navigateTo(with viewModel: LawsModel)
 }

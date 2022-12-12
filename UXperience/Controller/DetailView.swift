@@ -13,6 +13,8 @@ class DetailView: UIView {
     weak var delegate: DetailViewDelegate!
     private var textValue: String = ""
     private var titleValue: String = ""
+    private var imageURL: String = ""
+    private var exempleURL: String = ""
 
 
 
@@ -50,6 +52,8 @@ class DetailView: UIView {
         super.didMoveToWindow()
         textValue = delegate.setFrontCardText()
         titleValue = delegate.setFrontCardTitle()
+        imageURL = delegate.setImageOfCar()
+        exempleURL = delegate.setImageExemple()
         setLayout()
     }
     private func setLayout() {
@@ -58,6 +62,8 @@ class DetailView: UIView {
             var view = SwiftUIView()
             view.textFrontCard = self.textValue
             view.titleFrontCard = self.titleValue
+            view.imageURL = self.imageURL
+            view.exemploURL = self.exempleURL
             return view
         }.makeContentView()
 

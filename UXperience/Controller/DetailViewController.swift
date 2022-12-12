@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewDelegate {
+    func setImageExemple() -> String {
+        return detailViewModel!.exemplo
+    }
+
 
     func setFrontCardTitle() -> String {
         return detailViewModel!.titulo
@@ -44,5 +48,9 @@ extension DetailViewController: DetailViewDelegate {
     func goToWebSite() -> String {
         let url = detailViewModel!.leiaMais
         return url
+    }
+
+    func setImageOfCar() -> String {
+        return  detailViewModel!.asset
     }
 }

@@ -10,7 +10,13 @@ import UIKit
 class FilterController: UIViewController {
     weak var delegate: FilterCollectionViewDelegate?
 
-    let nameArray: [String] = ["Todos", "Heuristica", "Principio", "Gestalt", "Vies Cognitivo"]
+    let nameArray: [String] = [
+        "Todos",
+        "Heuristica",
+        "Principio",
+        "Gestalt",
+        "Vies Cognitivo"
+    ]
     
     var selectedIndexPaths = [IndexPath]()
 
@@ -59,6 +65,8 @@ class FilterController: UIViewController {
             filterView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
+
+    var diselectedCellIsGone: IndexPath? = nil
 }
 
 
@@ -71,6 +79,8 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         cell.label.text = "\(nameArray[indexPath.row])"
+
+//        cell.configure(<#T##isSelected: Bool##Bool#>)
         return cell
     }
 
@@ -81,7 +91,10 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
+        if let cell = collectionView.cellForItem(at: indexPath) as? FilterCollectionViewCell {
             cell.backgroundFilterView.backgroundColor = nil
+        } else {
+            diselectedCellIsGone = indexPath
         }
+    }
 }

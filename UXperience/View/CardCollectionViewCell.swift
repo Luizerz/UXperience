@@ -23,23 +23,29 @@ class CardCollectionViewCell: UICollectionViewCell {
 
         self.cardView.clipsToBounds = false
 
-        self.cardView.layer.shadowRadius = 5
-        self.cardView.layer.shadowColor = UIColor(named: "cardShadowColor 1")?.cgColor
-        self.cardView.layer.shadowOpacity = 1
-        self.cardView.layer.shadowOffset = .init(width: 0, height: 3)
+//        self.cardView.layer.shadowRadius = 8
+//        self.cardView.layer.shadowColor = UIColor(named: "cardShadowColor 1")?.cgColor
+//        self.cardView.layer.shadowOpacity = 1
+//        self.cardView.layer.shadowOffset = .init(width: 0, height: 0)
 
         let cornerRadius = 15.0
 
         self.lawImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         self.lawImageView.layer.cornerRadius = cornerRadius
+        self.lawImageView.layer.borderWidth = 2.5
+        self.lawImageView.layer.borderColor = UIColor(named: "cardShadowColor")?.cgColor
         self.lawImageView.clipsToBounds = true
 
         self.labelBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         self.labelBackgroundView.layer.cornerRadius = cornerRadius
         self.labelBackgroundView.clipsToBounds = true
-//        self.labelBackgroundView.layer.borderColor = UIColor(named: "cardShadowColor 1")?.cgColor
-//        self.labelBackgroundView.layer.borderWidth = 5
 
+    }
+
+    override func prepareForReuse() {
+        self.lawImageView.image = nil
+        self.lawName.text = nil
+        super.prepareForReuse()
     }
 
     func configureLawName(with newText: String) {

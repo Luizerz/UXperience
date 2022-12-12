@@ -63,14 +63,14 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return viewModel.uxLaws.count // <- fazer um guard let ou um if let
+        return viewModel.uxLaws.count
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(viewModel.uxLaws[indexPath.row].titulo) // selecionador da collection
         let feedBack = UISelectionFeedbackGenerator()
         feedBack.selectionChanged()
-        delegate?.teste(with: viewModel.uxLaws[indexPath.row])
+        delegate?.navigateTo(with: viewModel.uxLaws[indexPath.row])
 
     }
 

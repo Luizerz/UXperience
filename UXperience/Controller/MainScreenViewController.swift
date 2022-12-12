@@ -45,7 +45,7 @@ extension MainScreenViewController: UISearchResultsUpdating {
 }
 
 extension MainScreenViewController: CardCollectionViewDelegate {
-    func teste(with viewModel: LawsModel) {
+    func navigateTo(with viewModel: LawsModel) {
         let rootView = DetailViewController(detailViewModel: viewModel)
         navigationController?.pushViewController(rootView, animated: true)
     }
@@ -54,7 +54,6 @@ extension MainScreenViewController: CardCollectionViewDelegate {
 extension MainScreenViewController: FilterCollectionViewDelegate {
     func getFilterByCategory(with labelText: String) {
         detailViewModel.getFilterByCategory(with: labelText)
-        cardCollectionView.cardView.reloadData()
     }
 }
     

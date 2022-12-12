@@ -17,11 +17,6 @@ class FilterCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 15
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.white.cgColor
-        
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let selection = collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell
-            selection.backgroundFilterView.backgroundColor = .systemIndigo
-        }
     }
 }
 

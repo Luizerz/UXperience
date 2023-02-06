@@ -174,6 +174,12 @@ public struct newView: View {
                             Spacer()
                         }
                         Spacer()
+
+                        Text("Boa Prática")
+                            .bold()
+                            .padding(35)
+
+
                         Image(exemploString ?? "")
                         Spacer()
                         HStack{

@@ -48,8 +48,8 @@ public struct SwiftUIView: View {
 
     public var body: some View {
         ZStack{
-            frontCard(animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
-            backCard(animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
+            frontCard(isFlipped: $isFlipped, animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
+            backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -72,29 +72,33 @@ public struct SwiftUIView: View {
 }
 
 public struct frontCard: View {
+    @Binding var isFlipped: Bool
     @Binding var animationAmount: Double
     var text: String
     var title: String
     var imageString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title, imageString: imageString)
+        newView(flipped: $isFlipped, animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title, imageString: imageString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 }
 
 public struct backCard: View {
+    @Binding var isFlipped: Bool
     @Binding var animationAmount: Double
     var title: String
     var imageString: String
     var exemploString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString)
+        newView(flipped: $isFlipped, animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
 }
 
 public struct newView: View {
+
+    @Binding var flipped: Bool
 
     @State var animationAmount = 0.0
     var stringText: String?
@@ -160,6 +164,7 @@ public struct newView: View {
                         }
                         Spacer()
                     }
+                    .accessibilityHidden(!flipped)
                 }
                 else {
                     VStack {
@@ -168,7 +173,8 @@ public struct newView: View {
                                 .resizable()
                                 .frame(width: 50,height: 50)
                                 .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
-                            Text(stringTitle ?? "Error")
+//                            Text(stringTitle ?? "Error")
+                            Text("")
                                 .font(Font.system(size: 18, weight: .heavy))
                                 .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()
@@ -189,6 +195,7 @@ public struct newView: View {
                         }
                         Spacer()
                     }
+                    .accessibilityHidden(flipped)
                 }
 
             }

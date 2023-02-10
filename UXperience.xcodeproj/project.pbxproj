@@ -223,9 +223,9 @@
 		4F7A21AF292E5D7000000F05 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4F7DC70529310D4F005A8184 /* Sounds */,
 				D12241D329378ED200A59DCC /* ReadJsonLaws.swift */,
 				4F7DC70329310BAF005A8184 /* SoundManager.swift */,
+				4F7DC70529310D4F005A8184 /* Sounds */,
 			);
 			path = Service;
 			sourceTree = "<group>";

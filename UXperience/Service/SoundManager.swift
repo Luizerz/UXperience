@@ -20,7 +20,7 @@ class SoundManager {
             forResource: name, withExtension: ".mp3"
         ) else { return }
 
-        do {
+        do { 
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
         } catch let error {

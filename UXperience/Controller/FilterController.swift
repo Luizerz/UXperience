@@ -80,7 +80,7 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         cell.label.text = "\(nameArray[indexPath.row])"
 
-//        cell.configure(<#T##isSelected: Bool##Bool#>)
+//        cell.configure()
         return cell
     }
 

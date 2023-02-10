@@ -62,6 +62,9 @@
 		4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
 		4F20CA9C299680C500C1B596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/laws.json; sourceTree = "<group>"; };
+		4F20CA9E299685F400C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		4F20CA9F299685F400C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4F20CAA0299685F500C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/laws.json"; sourceTree = "<group>"; };
 		4F39C828292CFF8200DDD8AE /* UXperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F39C82B292CFF8200DDD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F39C82D292CFF8200DDD8AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -343,6 +346,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4F39C81F292CFF8200DDD8AE;
 			productRefGroup = 4F39C829292CFF8200DDD8AE /* Products */;
@@ -453,6 +457,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F20CA9C299680C500C1B596 /* Base */,
+				4F20CAA0299685F500C1B596 /* pt-BR */,
 			);
 			name = laws.json;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F39C832292CFF8200DDD8AE /* Base */,
+				4F20CA9E299685F400C1B596 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F39C83A292CFF8300DDD8AE /* Base */,
+				4F20CA9F299685F400C1B596 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -480,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -540,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -600,6 +609,7 @@
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -632,6 +642,7 @@
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

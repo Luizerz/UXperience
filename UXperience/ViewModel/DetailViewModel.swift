@@ -93,14 +93,3 @@ class DetailViewModel {
         }
     }
 }
-//{
-//    for law in uxLaws {
-//        if law.titulo.contains(filterString) {
-//            filteredJason.append(law)
-//        }
-//    } 
-//    self.uxLaws = self.filteredJason
-//}
-
-//    .filter{ $0.lowercased().hasPrefix(searchText.lowercased()) }
-//    print(filteredArray)

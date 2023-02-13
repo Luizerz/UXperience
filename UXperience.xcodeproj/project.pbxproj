@@ -10,6 +10,7 @@
 		496825FE293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496825FD293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift */; };
 		4F1325A9293E1388006E5800 /* CardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */; };
 		4F1325AC293E13BD006E5800 /* DetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */; };
+		4F20CA9B299680C500C1B596 /* laws.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F20CA9D299680C500C1B596 /* laws.json */; };
 		4F39C82C292CFF8200DDD8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39C82B292CFF8200DDD8AE /* AppDelegate.swift */; };
 		4F39C82E292CFF8200DDD8AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39C82D292CFF8200DDD8AE /* SceneDelegate.swift */; };
 		4F39C830292CFF8200DDD8AE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F39C82F292CFF8200DDD8AE /* MainScreenViewController.swift */; };
@@ -34,7 +35,6 @@
 		4FBC3649292FA6AA007044F9 /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */; };
 		4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBC3648292FA6AA007044F9 /* NewsCellTableViewCell.xib */; };
 		A16F663E2934DEEA001D2796 /* LawsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F663D2934DEEA001D2796 /* LawsModel.swift */; };
-		A16F66402934DF6F001D2796 /* laws.json in Resources */ = {isa = PBXBuildFile; fileRef = A16F663F2934DF6F001D2796 /* laws.json */; };
 		D12241D429378ED200A59DCC /* ReadJsonLaws.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12241D329378ED200A59DCC /* ReadJsonLaws.swift */; };
 		D19DE0482930DF490090324B /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DE0462930DF490090324B /* CardCollectionViewCell.swift */; };
 		D19DE0492930DF490090324B /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19DE0472930DF490090324B /* CardCollectionViewCell.xib */; };
@@ -61,6 +61,10 @@
 		496825FD293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		4F1325A8293E1388006E5800 /* CardCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		4F1325AB293E13BD006E5800 /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
+		4F20CA9C299680C500C1B596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/laws.json; sourceTree = "<group>"; };
+		4F20CA9E299685F400C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		4F20CA9F299685F400C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4F20CAA0299685F500C1B596 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/laws.json"; sourceTree = "<group>"; };
 		4F39C828292CFF8200DDD8AE /* UXperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F39C82B292CFF8200DDD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F39C82D292CFF8200DDD8AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +93,6 @@
 		4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		4FBC3648292FA6AA007044F9 /* NewsCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCellTableViewCell.xib; sourceTree = "<group>"; };
 		A16F663D2934DEEA001D2796 /* LawsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawsModel.swift; sourceTree = "<group>"; };
-		A16F663F2934DF6F001D2796 /* laws.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laws.json; sourceTree = "<group>"; };
 		D12241D329378ED200A59DCC /* ReadJsonLaws.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadJsonLaws.swift; sourceTree = "<group>"; };
 		D19DE0462930DF490090324B /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		D19DE0472930DF490090324B /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -251,7 +254,7 @@
 		A16F663C2934DECB001D2796 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A16F663F2934DF6F001D2796 /* laws.json */,
+				4F20CA9D299680C500C1B596 /* laws.json */,
 				A16F663D2934DEEA001D2796 /* LawsModel.swift */,
 			);
 			path = Model;
@@ -343,6 +346,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4F39C81F292CFF8200DDD8AE;
 			productRefGroup = 4F39C829292CFF8200DDD8AE /* Products */;
@@ -361,8 +365,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F20CA9B299680C500C1B596 /* laws.json in Resources */,
 				4FBC364A292FA6AA007044F9 /* NewsCellTableViewCell.xib in Resources */,
-				A16F66402934DF6F001D2796 /* laws.json in Resources */,
 				4F39C83B292CFF8300DDD8AE /* LaunchScreen.storyboard in Resources */,
 				D19DE0492930DF490090324B /* CardCollectionViewCell.xib in Resources */,
 				4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */,
@@ -449,10 +453,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4F20CA9D299680C500C1B596 /* laws.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F20CA9C299680C500C1B596 /* Base */,
+				4F20CAA0299685F500C1B596 /* pt-BR */,
+			);
+			name = laws.json;
+			sourceTree = "<group>";
+		};
 		4F39C831292CFF8200DDD8AE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4F39C832292CFF8200DDD8AE /* Base */,
+				4F20CA9E299685F400C1B596 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -461,6 +475,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4F39C83A292CFF8300DDD8AE /* Base */,
+				4F20CA9F299685F400C1B596 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -472,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -532,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -592,6 +609,7 @@
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -624,6 +642,7 @@
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FilterCollectionViewDelegate: AnyObject {
-    func getFilterByCategory(with labelText: String)
+    func getFilterByCategory(with labelText: String?)
 }

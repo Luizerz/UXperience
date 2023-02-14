@@ -52,7 +52,7 @@ extension MainScreenViewController: CardCollectionViewDelegate {
 }
 
 extension MainScreenViewController: FilterCollectionViewDelegate {
-    func getFilterByCategory(with labelText: String) {
+    func getFilterByCategory(with labelText: String?) {
         detailViewModel.getFilterByCategory(with: labelText)
     }
 }

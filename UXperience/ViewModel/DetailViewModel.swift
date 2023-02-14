@@ -26,7 +26,8 @@ class DetailViewModel {
         }
     }
 
-    func getFilterByCategory(with labelText: String) {
+    // Funcao de filtragem por categoria dos cards na tela principal
+    func getFilterByCategory(with labelText: String?) {
         let json = ReadJsonLaws.instance.loadjson()
         switch labelText {
             
@@ -72,12 +73,11 @@ class DetailViewModel {
             break
         }
     }
-    //"Todos", "Heuristica", "Principles", "Gestalt", "Cognitive" // Cuidado com os acentos
-    
-    func configureNewsLabel(with label: UILabel)  {
-        label.text = self.newsLabel
-    }
-    
+    //"Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"
+
+    // filtragem pela searchbar
+    // MARK: ajeitar o bug do case sensitive
+
     func filterJson(with filterString: String) {
         let uxLaws = ReadJsonLaws().loadjson()
         filteredJason = []

@@ -1,6 +1,6 @@
 [
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Efeito de Usabilidade Estética",
       "resumo":"Um design agradável cria uma resposta positiva no cérebro das pessoas e as leva a acreditar que o design realmente funciona melhor. As pessoas são mais tolerantes com pequenos problemas de usabilidade quando o design de um produto ou serviço tem uma estética agradável. O design visualmente agradável pode esconder problemas de usabilidade e evitar que problemas sejam descobertos durante o teste de usabilidade.  A usabilidade e a estética são os dois fatores mais importantes na avaliação da experiência geral do usuário para um aplicativo. Elas são julgadas pelas expectativas de reutilização de um usuário e, em seguida, seu julgamento final pós-uso ou experiente. O estilo cognitivo de um usuário pode influenciar como eles interagem e percebem um aplicativo, o que, por sua vez, pode influenciar seu julgamento sobre o aplicativo.",
       "leiaMais":"https://www.nngroup.com/articles/aesthetic-usability-effect/",
@@ -8,7 +8,7 @@
       "exemplo":"usabilidadeEstética"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Lei de Fitt's",
       "resumo":"Os alvos de toque devem ser grandes o suficiente para que os usuários os selecionem com precisão. Eles devem ter amplo espaçamento entre eles, assim como devem ser colocados em áreas de fácil acesso. À medida que você cria novos designs de interface do usuário, pense em otimizar a distância e o tamanho ​​criando alvos grandes, bem espaçados e posicionando-os de modo que fiquem próximos da localização anterior mais provável para o usuário.",
       "leiaMais":"https://www.nngroup.com/articles/fitts-law/",
@@ -16,7 +16,7 @@
       "exemplo":"fitts"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Efeito Gradiente de Objectivos",
       "resumo":"A tendência de se aproximar de um objetivo aumenta com a proximidade do objetivo.Quanto mais próximos os usuários estiverem de concluir uma tarefa, mais rápido eles trabalharão para alcançá-la. Fornecer a sensação de progresso em direção a uma meta ajudará a garantir que os usuários tenham mais motivação para concluir essa tarefa. Forneça uma indicação clara do progresso para motivar os usuários a concluir as tarefas.",
       "leiaMais":"https://medium.com/choice-hacking/how-uber-uses-psychology-to-perfect-their-customer-experience-d6c440285029",
@@ -24,7 +24,7 @@
       "exemplo":"gradiente"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Lei de Hick`s",
       "resumo":"O tempo que leva para tomar uma decisão aumenta com o número e a complexidade das escolhas. Diminua as opções de escolha quando o tempo de resposta for curto, quebre uma tarefa grande em várias pequenas, evite sobrecarregar os usuários destacando as opções recomendadas. Tenha cuidado para não simplificar demais e chegar ao ponto do usuário não entender. Às vezes, não há como evitar a complexidade, quando temos uma grande quantidade de informações necessárias. O objetivo da Lei de Hick é tentar simplificar o processo de tomada de decisão, não eliminá -lo totalmente.",
       "leiaMais":"https://medium.com/choice-hacking/choice-overload-why-simplicity-is-the-key-to-winning-customers-2f8e239eaba6",
@@ -32,7 +32,7 @@
       "exemplo":"hicklaw"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Lei de Jakob",
       "resumo":"Os usuários passam a maior parte do tempo em outros sites. Isso significa que os usuários preferem que seu site funcione da mesma forma que os outros funcionam. Os usuários vão transferir as expectativas que construíram em torno de um produto familiar para outro que pareça semelhante. Ao alavancar os modelos mentais existentes, podemos criar experiências de usuário superiores nas quais os usuários podem se concentrar em suas tarefas em vez de aprender novos modelos. Ao fazer alterações, minimize as diferenças, capacitando os usuários a continuar usando uma versão familiar por um tempo limitado.",
       "leiaMais":"https://www.nngroup.com/articles/top-10-mistakes-web-design/",
@@ -40,7 +40,7 @@
       "exemplo":"jakob"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Lei de Miller's",
       "resumo":"Qualquer elemento que não esteja ajudando o usuário a atingir seu objetivo está trabalhando contra ele. Lembre-se de que a capacidade de memória de curto prazo varia de pessoa para pessoa, com base em seu conhecimento prévio e contexto situacional. Organize o conteúdo em partes menores para ajudar os usuários a processar, entender e memorizar facilmente. Embora a carga cognitiva não seja totalmente evitável, os designers devem se esforçar para gerenciar e acomodar esses limites.",
       "leiaMais":"https://blog.prototypr.io/design-principles-for-reducing-cognitive-load-84e82ca61abd",
@@ -48,7 +48,7 @@
       "exemplo":"miller"
    },
    {
-      "categoria":"heuristica",
+      "categoria":"heurística",
       "titulo":"Lei de Parkinson`s",
       "resumo":"Limite o tempo que leva para concluir uma tarefa ao que os usuários esperam que ela leve. Um grande grupo pode conter apenas alguns contribuintes significativos para o resultado desejado. Recursos como preenchimento automático para economizar tempo do usuário ao fornecer informações críticas nos formulários. Isso permite a conclusão rápida de compras, reservas e outras funções semelhantes, evitando a inflação de tarefa",
       "leiaMais":"https://medium.com/the-mission/parkinsons-law-why-constraints-are-the-best-thing-you-can-work-with-4fad6e0e91cf",
@@ -56,7 +56,7 @@
       "exemplo":"parkinson"
    },
    {
-      "categoria":"principio",
+      "categoria":"princípio",
       "titulo":"Limiar de Doherty",
       "resumo":"As melhores formas de se utilizar da lei Limiar de Doherty é tendo maneiras de lidar com atrasos, como por exemplo utilizar animações durante um processo demorado (>400ms). Barras de progressão são ótimas práticas como feedback para o usuário, ajudando a deixar a demora tolerável. Outro ponto importante que deve-se levar em consideração é o desempenho percebido, o qual é uma forma de trazer a sensação de que a execução do software foi mais rápida do que aparenta.",
       "leiaMais":"https://jlelliotton.blogspot.ca/p/the-economic-value-of-rapid-response.html",
@@ -64,7 +64,7 @@
       "exemplo":"fitts"
    },
    {
-      "categoria":"principio",
+      "categoria":"princípio",
       "titulo":"Navalha de Occam",
       "resumo":"A Navalha de Occam prevê que a melhor forma de deixar o design efetivo, é deixá-lo da maneira mais simples possível. Cada elemento deve ser analisado minuciosamente e dentre possíveis opções para o elemento, escolher o mais simples, sem comprometer a usabilidade.",
       "leiaMais":"https://medium.com/@jonyablonski/designing-with-occams-razor-3692df2f3c7f",
@@ -72,7 +72,7 @@
       "exemplo":"occam"
    },
    {
-      "categoria":"principio",
+      "categoria":"princípio",
       "titulo":"Princípio de Pareto",
       "resumo":"O princípio de Pareto afirma que, para muitos eventos, cerca de 80% dos efeitos vêm de 20% das causas. - As entradas e saídas geralmente não são distribuídas uniformemente. - Um grande grupo pode conter apenas alguns contribuintes significativos para o resultado desejado. - Concentre a maior parte do esforço nas áreas que trarão os maiores benefícios para a maioria dos usuários. O Princípio de Pareto é utilizado para direcionar um foco específico. Dessa forma, cerca de 80% dos efeitos vêm de 20% das causas.",
       "leiaMais":"https://medium.com/togdesign/o-princ%C3%ADpio-de-pareto-e-ux-design-como-não-esquecer-dos-80-20-e559892ee86",
@@ -80,7 +80,7 @@
       "exemplo":"pareto"
    },
    {
-      "categoria":"principio",
+      "categoria":"princípio",
       "titulo":"Lei de Postel",
       "resumo":"Seja liberal no que você aceita e conservador no que você envia. Seja flexível e tolerante com as várias ações que o usuário possa tomar. Quanto mais planejado o design, mais resiliente será o design. Aceite a entrada variável dos usuários, traduzindo essa entrada para atender às suas necessidades, definindo limites para a entrada e fornecendo feedback claro ao usuário. Para dar ao usuário uma experiência positiva, a interface deve ser empática, flexível e tolerante para cada ação que o usuário tomar.",
       "leiaMais":"https://markboulton.co.uk/journal/2016-05-17.design-systems-and-postels-law/",
@@ -88,7 +88,7 @@
       "exemplo":"postel"
    },
    {
-      "categoria":"principio",
+      "categoria":"princípio",
       "titulo":"Lei de Tesler",
       "resumo":"A Lei de Tesler, também chamada de Lei da Conservação da Complexidade, afirma que em um sistema, toda a complexidade que há tem um limite de redução e devemos tentar alcançar esse limite. Dito isso, toda a complexidade que o usuário lidaria, o sistema deve lidar, sempre tomando cuidado para não ultrapassar o limite e acabar chegando em uma abstração.",
       "leiaMais":"https://fs.blog/2020/10/why-life-cant-be-simpler/",
@@ -136,7 +136,7 @@
       "exemplo":"conectividadeUniforme"
    },
    {
-      "categoria":"Vies Cognitivo",
+      "categoria":"Viés Cognitivo",
       "titulo":"Regra do Pico Final",
       "resumo":"As pessoas julgam uma experiência em grande parte com base em como se sentiram no auge e no final, em vez da soma total ou média de cada momento da experiência. Peak-End Rule é uma regra psicológica em que uma experiência é lembrada e avaliada com base no ponto máximo (mais intenso) da experiência e/ou no final da experiência.",
       "leiaMais":"https://uxdesign.cc/peak-end-rule-54eedd375c4d",
@@ -144,7 +144,7 @@
       "exemplo":"fitts"
    },
    {
-      "categoria":"Vies Cognitivo",
+      "categoria":"Viés Cognitivo",
       "titulo":"Efeito de Posição Serial",
       "resumo":"O efeito de posição serial, descreve como a posição de um item em uma sequência afeta a precisão da recordação. Os dois conceitos envolvidos, o efeito de primazia e o efeito de recência, explicam como os itens apresentados no início e no final de uma sequência são lembrados com maior precisão do que os itens no meio de uma lista. A manipulação do efeito de posição serial para criar melhores experiências de usuário é refletida em muitos designs populares de empresas de sucesso.",
       "leiaMais":"https://www.interaction-design.org/literature/article/serial-position-effect-how-to-create-better-user-interfaces",
@@ -152,7 +152,7 @@
       "exemplo":"posiçãoSerial"
    },
    {
-      "categoria":"Vies Cognitivo",
+      "categoria":"Viés Cognitivo",
       "titulo":"Efeito Von Restorff",
       "resumo":"O efeito Von Restorff, também conhecido como Efeito de Isolamento, prevê que, quando vários objetos semelhantes estão presentes, aquele que difere do resto tem maior probabilidade de ser lembrado. A teoria foi definida pelo psiquiatra e pediatra alemão Hedwig von Restorff, que, em seu estudo de 1933, descobriu que, quando os participantes recebiam uma lista de itens categoricamente semelhantes com um item distinto e isolado na lista, a memória para o item foi melhorado.",
       "leiaMais":"https://blog.marvelapp.com/psychology-principles-every-uiux-designer-needs-know/",
@@ -160,7 +160,7 @@
       "exemplo":"vonRestorff"
    },
    {
-      "categoria":"Vies Cognitivo",
+      "categoria":"Viés Cognitivo",
       "titulo":"Efeito Zeigarnik",
       "resumo":"O Efeito Zeigarnik explica que tarefas incompletas são mais fáceis de lembrar do que as bem-sucedidas. Então ter recursos visuais que representem a incompletude da tarefa é fundamental para ajudar a enfatizar a tensão específica da tarefa e encorajar o usuário a se lembrar da tarefa. Barras de progresso, círculos, marcas de seleção ou indicadores de etapas são excelentes maneiras de indicar quando uma tarefa foi concluída. Além disso, você sabe, quanto mais sentimentos positivos seu usuário associar ao seu produto, maior a probabilidade de ele voltar.",
       "leiaMais":"https://uxdesign.cc/endowed-progress-effect-give-your-users-a-head-start-97d52d8b0396",

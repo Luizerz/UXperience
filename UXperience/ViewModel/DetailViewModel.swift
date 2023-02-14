@@ -30,7 +30,7 @@ class DetailViewModel {
         let json = ReadJsonLaws.instance.loadjson()
         switch labelText {
             
-        case "Heuristica":
+        case "Heurística":
             var heuristica: [LawsModel] = []
             for model in json {
                 if model.categoria == .heuristica {
@@ -40,7 +40,7 @@ class DetailViewModel {
             self.uxLaws = heuristica
 
             
-        case "Principio":
+        case "Princípio":
             var principio: [LawsModel] = []
             for model in json {
                 if model.categoria == .principio {
@@ -58,7 +58,7 @@ class DetailViewModel {
             }
             self.uxLaws = gestalt
             
-        case "Vies Cognitivo":
+        case "Viés Cognitivo":
             var viesCognitivo: [LawsModel] = []
             for model in json {
                 if model.categoria == .cognitiveBias {
@@ -72,7 +72,7 @@ class DetailViewModel {
             break
         }
     }
-    //"Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"
+    //"Todos", "Heuristica", "Principles", "Gestalt", "Cognitive" // Cuidado com os acentos
     
     func configureNewsLabel(with label: UILabel)  {
         label.text = self.newsLabel

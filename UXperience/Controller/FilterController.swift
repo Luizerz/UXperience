@@ -12,10 +12,10 @@ class FilterController: UIViewController {
 
     let nameArray: [String] = [
         "Todos",
-        "Heuristica",
-        "Principio",
+        "Heurística",
+        "Princípio",
         "Gestalt",
-        "Vies Cognitivo"
+        "Viés Cognitivo"
     ]
     
     var selectedIndexPaths = [IndexPath]()

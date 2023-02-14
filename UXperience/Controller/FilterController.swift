@@ -27,9 +27,9 @@ class FilterController: UIViewController {
     let tags: [Tag] = [
         Tag(name: "Todos", isSelected: true),
         Tag(name: "Heurística"),
-        Tag(name: "Principio"),
+        Tag(name: "Princípio"),
         Tag(name: "Gestalt"),
-        Tag(name: "Vies Cognitivo")
+        Tag(name: "Viés Cognitivo")
     ]
     
     var selectedIndexPaths = [IndexPath]()

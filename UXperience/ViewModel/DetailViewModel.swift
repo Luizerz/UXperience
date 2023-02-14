@@ -27,7 +27,7 @@ class DetailViewModel {
     }
 
     // Funcao de filtragem por categoria dos cards na tela principal
-    func getFilterByCategory(with labelText: String) {
+    func getFilterByCategory(with labelText: String?) {
         let json = ReadJsonLaws.instance.loadjson()
         switch labelText {
             

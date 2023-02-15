@@ -96,8 +96,9 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         cell.label.text = currentTag.name
-        cell.backgroundFilterView.backgroundColor = currentTag.isSelected ? .systemIndigo : .clear
-        cell.label.textColor = currentTag.isSelected ? UIColor.white : UIColor.systemIndigo
+        cell.backgroundFilterView.backgroundColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1) : .clear
+        cell.label.textColor = currentTag.isSelected ? UIColor.white : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1)
+        cell.layer.borderColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1).cgColor : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1).cgColor
         return cell
     }
     

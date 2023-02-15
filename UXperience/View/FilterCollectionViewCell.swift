@@ -16,7 +16,6 @@ class FilterCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         self.layer.cornerRadius = 15
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.systemIndigo.cgColor
     }
 }
 

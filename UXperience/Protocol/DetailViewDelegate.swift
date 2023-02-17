@@ -12,6 +12,6 @@ protocol DetailViewDelegate: AnyObject {
     func titleOfNews()-> String
     func setFrontCardTitle()-> String
     func setFrontCardText()-> String
-    func setImageOfCar()-> String
+    func setImageOfCard()-> String
     func setImageExemple()-> String
 }

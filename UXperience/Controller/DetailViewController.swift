@@ -50,7 +50,7 @@ extension DetailViewController: DetailViewDelegate {
         return url
     }
 
-    func setImageOfCar() -> String {
+    func setImageOfCard() -> String {
         return  detailViewModel!.asset
     }
 }

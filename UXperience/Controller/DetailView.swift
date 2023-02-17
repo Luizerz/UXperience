@@ -52,7 +52,7 @@ class DetailView: UIView {
         super.didMoveToWindow()
         textValue = delegate.setFrontCardText()
         titleValue = delegate.setFrontCardTitle()
-        imageURL = delegate.setImageOfCar()
+        imageURL = delegate.setImageOfCard()
         exempleURL = delegate.setImageExemple()
         setLayout()
     }

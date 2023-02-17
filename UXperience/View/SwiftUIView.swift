@@ -14,6 +14,11 @@ public struct SwiftUIView: View {
     @State private var backCardAmount = 90.0
     @State private var isFlipped: Bool = true
 
+    public var textFrontCard: String?
+    public var titleFrontCard: String?
+    public var imageURL: String?
+    public var exemploURL: String?
+
     private func flipCard () {
         isFlipped = !isFlipped
         if isFlipped {
@@ -43,8 +48,8 @@ public struct SwiftUIView: View {
 
     public var body: some View {
         ZStack{
-            frontCard(animationAmount: $frontCardAmount)
-            backCard(animationAmount: $backCardAmount)
+            frontCard(isFlipped: $isFlipped, animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
+            backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -67,17 +72,25 @@ public struct SwiftUIView: View {
 }
 
 public struct frontCard: View {
+    @Binding var isFlipped: Bool
     @Binding var animationAmount: Double
+    var text: String
+    var title: String
+    var imageString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: "frontCard")
+        newView(flipped: $isFlipped, animationAmount: animationAmount, stringText: text, isFront: true, stringTitle: title, imageString: imageString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 }
 
 public struct backCard: View {
+    @Binding var isFlipped: Bool
     @Binding var animationAmount: Double
+    var title: String
+    var imageString: String
+    var exemploString: String
     public var body: some View {
-        newView(animationAmount: animationAmount, stringText: "backCard")
+        newView(flipped: $isFlipped, animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -85,8 +98,14 @@ public struct backCard: View {
 
 public struct newView: View {
 
+    @Binding var flipped: Bool
+
     @State var animationAmount = 0.0
     var stringText: String?
+    var isFront: Bool
+    var stringTitle: String?
+    var imageString: String?
+    var exemploString: String?
 
     let gradient = Gradient(
         colors: [
@@ -116,12 +135,68 @@ public struct newView: View {
                         gradient: gradient,
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing))
-//                    .overlay{
-//                        RoundedRectangle(cornerRadius: 20)
-//                            .stroke(Color.gray, lineWidth: 0.6)
-//                    }
 
-                Text(stringText ?? "Error ao inicializar a stringText \(#function)")
+                if isFront {
+                    VStack {
+                        HStack {
+                            Image(imageString!)
+                                .resizable()
+                                .frame(width: 50,height: 50)
+                                .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
+                            Text(stringTitle ?? "Error")
+                                .font(Font.system(size: 18, weight: .heavy))
+                                .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                        }
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text(stringText ?? "Error ao inicializar a stringText \(#function)")
+                                .font(Font.system(size: 16, weight: .medium))
+                                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                            Spacer()
+                        }
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Image("flipLogo")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                        }
+                        Spacer()
+                    }
+                    .accessibilityHidden(!flipped)
+                }
+                else {
+                    VStack {
+                        HStack {
+                            Image(imageString!)
+                                .resizable()
+                                .frame(width: 50,height: 50)
+                                .padding(EdgeInsets(top: 30, leading: 25, bottom: 0, trailing: 0))
+                            Text(stringTitle ?? "Error")
+                                .font(Font.system(size: 18, weight: .heavy))
+                                .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
+                            Spacer()
+                        }
+                        Spacer()
+
+                        Text("Boa Prática")
+                            .bold()
+                            .padding(35)
+
+
+                        Image(exemploString ?? "")
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Image("flipLogo")
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                        }
+                        Spacer()
+                    }
+                    .accessibilityHidden(flipped)
+                }
+
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

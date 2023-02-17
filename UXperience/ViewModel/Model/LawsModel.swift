@@ -11,11 +11,13 @@ struct LawsModel: Codable {
     let categoria: Categoria
     let titulo, resumo: String
     let leiaMais: String
+    let asset: String
+    let exemplo: String
 }
 
 enum Categoria: String, Codable {
-    case cognitiveBias = "Cognitive Bias"
+    case cognitiveBias = "Viés Cognitivo"
     case gestalt = "gestalt"
-    case heuristica = "heuristica"
-    case principio = "principio"
+    case heuristica = "heurística"
+    case principio = "princípio"
 }

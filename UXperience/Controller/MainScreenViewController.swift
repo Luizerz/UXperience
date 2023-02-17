@@ -18,6 +18,8 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        detailViewModel.binding = self
+
         navigationItem.hidesSearchBarWhenScrolling = false
 
         searchBar.searchResultsUpdater = self
@@ -26,6 +28,7 @@ class MainScreenViewController: UIViewController {
         navigationItem.searchController = searchBar
         cardCollectionView.viewModel = detailViewModel
         cardCollectionView.delegate = self
+        filterView.delegate = self
 
         // MARK: - TODO: trocar por protocolo ViewCode
         addSubviews()
@@ -36,18 +39,27 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         detailViewModel.filterJson(with: searchController.searchBar.text ?? "")
-        cardCollectionView.cardView.reloadData()
+        // Sem Data Binding
+        // cardCollectionView.cardView.reloadData()
     }
 }
 
-protocol CardCollectionViewDelegate: AnyObject {
-    func teste(with viewModel: LawsModel)
+extension MainScreenViewController: CardCollectionViewDelegate {
+    func navigateTo(with viewModel: LawsModel) {
+        let rootView = DetailViewController(detailViewModel: viewModel)
+        navigationController?.pushViewController(rootView, animated: true)
+    }
 }
 
-extension MainScreenViewController: CardCollectionViewDelegate {
-    func teste(with viewModel: LawsModel) {
-        let rootView = DetailViewController()
-        rootView.detailViewModel = viewModel
-        navigationController?.pushViewController(rootView, animated: true)
+extension MainScreenViewController: FilterCollectionViewDelegate {
+    func getFilterByCategory(with labelText: String?) {
+        detailViewModel.getFilterByCategory(with: labelText)
+    }
+}
+    
+// Data Binding
+extension MainScreenViewController: ViewModelBinding {
+    func reloadCollection() {
+        cardCollectionView.cardView.reloadData()
     }
 }

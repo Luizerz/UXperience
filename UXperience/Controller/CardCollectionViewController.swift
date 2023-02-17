@@ -86,10 +86,6 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         cell.configureImage(with: viewModel.uxLaws[indexPath.row].asset)
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 272)
-    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20

@@ -64,6 +64,10 @@ class FilterController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         filterViewConstraints()
+//        accessibilityElements = [self]
+//        filterView.accessibilityLabel = "Filtragem por Categoria"
+//        filterView.isAccessibilityElement = true
+//        filterView.accessibilityContainerType = .semanticGroup
     }
 
     private func addSubViews() {
@@ -99,6 +103,13 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         cell.backgroundFilterView.backgroundColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1) : .clear
         cell.label.textColor = currentTag.isSelected ? UIColor.white : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1)
         cell.layer.borderColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1).cgColor : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1).cgColor
+        cell.isAccessibilityElement = true
+        if tags[indexPath.row].isSelected {
+            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Selecionado"
+        } else {
+            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Deselecionado"
+        }
+
         return cell
     }
     

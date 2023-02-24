@@ -23,6 +23,7 @@ class Tag: Equatable {
 // -> para fazer a correcao dos bug do filtro foi utilizado um modelo que antes era só um array, dessa forma podemos fazer o modelo com o nome e com um booleano de selecionado. Dessa forma apenas verificamos o estado a partir do modelo.
 class FilterController: UIViewController {
     weak var delegate: FilterCollectionViewDelegate?
+    weak var searchDismissDelegate: DismissDelegate?
 
     let tags: [Tag] = [
         Tag(name: "Todos", isSelected: true),
@@ -109,7 +110,6 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         } else {
             cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Deselecionado"
         }
-
         return cell
     }
     
@@ -125,8 +125,20 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         
         if selectedTag.isSelected {
             delegate?.getFilterByCategory(with: selectedTag.name)
+            searchDismissDelegate?.dismissSearchEdit(with: selectedTag.name)
         } else {
             delegate?.getFilterByCategory(with: nil)
         }
+    }
+
+    func foo() {
+        for aux in 0..<tags.endIndex {
+            if aux == 0 {
+                tags[aux].isSelected = true
+            } else{
+                tags[aux].isSelected = false
+            }
+        }
+        filterView.reloadData()
     }
 }

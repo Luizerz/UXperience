@@ -17,6 +17,7 @@ extension MainScreenViewController {
         cardCollectionView.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(filterView.view)
         view.addSubview(cardCollectionView.view)
+        
     }
 
     func setupConstraints() {

@@ -15,7 +15,7 @@ protocol ViewModelBinding: AnyObject {
 class DetailViewModel {
 
     weak var binding: ViewModelBinding? = nil
-    var filteredJason: [LawsModel] = []
+    var filteredJson: [LawsModel] = []
 
     // virá da camada service
     let newsLabel: String = "Artigo Medium"
@@ -75,21 +75,18 @@ class DetailViewModel {
     }
     //"Todos", "Heuristica", "Principles", "Gestalt", "Cognitive"
 
-    // filtragem pela searchbar
-    // MARK: ajeitar o bug do case sensitive
-
     func filterJson(with filterString: String) {
         let uxLaws = ReadJsonLaws().loadjson()
-        filteredJason = []
+        filteredJson = []
         if filterString.isEmpty {
             self.uxLaws = uxLaws
         } else {
             for law in uxLaws {
                 if law.titulo.localizedCaseInsensitiveContains(filterString) {
-                    filteredJason.append(law)
+                    filteredJson.append(law)
                 }
             }
-            self.uxLaws = self.filteredJason
+            self.uxLaws = self.filteredJson
         }
     }
 }

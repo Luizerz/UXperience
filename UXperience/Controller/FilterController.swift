@@ -23,6 +23,7 @@ class Tag: Equatable {
 // -> para fazer a correcao dos bug do filtro foi utilizado um modelo que antes era só um array, dessa forma podemos fazer o modelo com o nome e com um booleano de selecionado. Dessa forma apenas verificamos o estado a partir do modelo.
 class FilterController: UIViewController {
     weak var delegate: FilterCollectionViewDelegate?
+    weak var searchDismissDelegate: DismissDelegate?
 
     let tags: [Tag] = [
         Tag(name: "Todos", isSelected: true),
@@ -64,6 +65,10 @@ class FilterController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         filterViewConstraints()
+//        accessibilityElements = [self]
+//        filterView.accessibilityLabel = "Filtragem por Categoria"
+//        filterView.isAccessibilityElement = true
+//        filterView.accessibilityContainerType = .semanticGroup
     }
 
     private func addSubViews() {
@@ -99,6 +104,12 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         cell.backgroundFilterView.backgroundColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1) : .clear
         cell.label.textColor = currentTag.isSelected ? UIColor.white : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1)
         cell.layer.borderColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1).cgColor : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1).cgColor
+        cell.isAccessibilityElement = true
+        if tags[indexPath.row].isSelected {
+            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Selecionado"
+        } else {
+            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Deselecionado"
+        }
         return cell
     }
     
@@ -114,8 +125,20 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         
         if selectedTag.isSelected {
             delegate?.getFilterByCategory(with: selectedTag.name)
+            searchDismissDelegate?.dismissSearchEdit(with: selectedTag.name)
         } else {
             delegate?.getFilterByCategory(with: nil)
         }
+    }
+
+    func foo() {
+        for aux in 0..<tags.endIndex {
+            if aux == 0 {
+                tags[aux].isSelected = true
+            } else{
+                tags[aux].isSelected = false
+            }
+        }
+        filterView.reloadData()
     }
 }

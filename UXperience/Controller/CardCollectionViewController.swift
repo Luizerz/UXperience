@@ -41,7 +41,6 @@ class CardCollectionViewController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         cardSetViewContratins()
-
     }
 
     private func addSubViews() {

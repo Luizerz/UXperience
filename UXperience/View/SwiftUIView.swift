@@ -148,6 +148,7 @@ public struct newView: View {
                                 .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()
                         }
+                        .accessibilityElement(children: .combine)
                         Spacer()
                         HStack {
                             Spacer()
@@ -178,6 +179,7 @@ public struct newView: View {
                                 .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 0))
                             Spacer()
                         }
+                        .accessibilityElement(children: .combine)
                         Spacer()
 
                         Text("Boa Prática")

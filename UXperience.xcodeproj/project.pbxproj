@@ -257,8 +257,8 @@
 		A16F663C2934DECB001D2796 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4F20CA9D299680C500C1B596 /* laws.json */,
 				A16F663D2934DEEA001D2796 /* LawsModel.swift */,
+				4F20CA9D299680C500C1B596 /* laws.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";

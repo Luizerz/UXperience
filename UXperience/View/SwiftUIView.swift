@@ -149,6 +149,7 @@ public struct newView: View {
                             Spacer()
                         }
                         .accessibilityElement(children: .combine)
+                        .accessibilityLabel(Text("Frente do card. \(stringTitle!)"))
                         Spacer()
                         HStack {
                             Spacer()
@@ -161,9 +162,10 @@ public struct newView: View {
                         HStack{
                             Spacer()
                             Image("flipLogo")
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 15))
+                                .accessibilityLabel(Text("Botão de girar o card."))
+                                .accessibilityHint(Text("Toque duas vezes na tela para girar o card e tenha um exemplo prático da lei."))
                         }
-                        Spacer()
                     }
                     .accessibilityHidden(!flipped)
                 }
@@ -180,6 +182,7 @@ public struct newView: View {
                             Spacer()
                         }
                         .accessibilityElement(children: .combine)
+                        .accessibilityLabel(Text("Verso do card. \(stringTitle!)"))
                         Spacer()
 
                         Text("Boa Prática")
@@ -192,9 +195,11 @@ public struct newView: View {
                         HStack{
                             Spacer()
                             Image("flipLogo")
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 15))
+                                .accessibilityLabel(Text("Botão de girar o card."))
+                                .accessibilityHint(Text("Toque duas vezes na tela para girar o card e voltar para a explicação."))
                         }
-                        Spacer()
+
                     }
                     .accessibilityHidden(flipped)
                 }

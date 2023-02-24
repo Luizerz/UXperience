@@ -83,6 +83,9 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
         }
         cell.configureLawName(with: viewModel.uxLaws[indexPath.row].titulo)
         cell.configureImage(with: viewModel.uxLaws[indexPath.row].asset)
+        cell.isAccessibilityElement = true
+        cell.accessibilityLabel = "Card \(viewModel.uxLaws[indexPath.row].titulo)"
+        cell.accessibilityHint = "Toque duas vezes na tela para ser direcionado á tela de detalhes."
         return cell
     }
 

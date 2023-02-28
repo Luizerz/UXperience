@@ -24,6 +24,6 @@ class ReadJsonLaws {
             }
         }
 
-        return [LawsModel(categoria: Categoria.cognitiveBias, titulo: "Error", resumo: "", leiaMais: "", asset: "", exemplo: "")]
+        return [LawsModel(categoria: Categoria.cognitiveBias, titulo: "Error", resumo: "", leiaMais: "", asset: "", exemplo: "", descrição_exemplo: "")]
     }
 }

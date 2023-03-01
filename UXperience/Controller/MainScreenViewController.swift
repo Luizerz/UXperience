@@ -8,18 +8,17 @@
 import UIKit
 
 class MainScreenViewController: UIViewController {
-
+    
     private lazy var searchBar = UISearchController(searchResultsController: nil)
 
     private(set) var filterView = FilterController()
     private(set) var cardCollectionView = CardCollectionViewController()
     private var detailViewModel = DetailViewModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         detailViewModel.binding = self
-
         navigationItem.hidesSearchBarWhenScrolling = false
 
         searchBar.searchResultsUpdater = self

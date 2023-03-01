@@ -25,6 +25,11 @@ class DetailViewController: UIViewController {
         detailView.delegate = self
         self.view = detailView
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.largeTitleDisplayMode = .never
+    }
 }
 
 extension DetailViewController: DetailViewDelegate {

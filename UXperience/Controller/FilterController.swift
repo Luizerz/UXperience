@@ -7,6 +7,16 @@
 
 import UIKit
 
+class AccessibleCollectionView: UICollectionView {
+    override func accessibilityElementCount() -> Int {
+        guard let dataSource = dataSource else {
+            return 0
+        }
+
+        return dataSource.collectionView(self, numberOfItemsInSection: 0)
+    }
+}
+
 class Tag: Equatable {
     let name: String
     var isSelected: Bool
@@ -36,8 +46,8 @@ class FilterController: UIViewController {
     var selectedIndexPaths = [IndexPath]()
 
     
-    private lazy var filterView: UICollectionView = {
-        let collectionView = UICollectionView(
+    private lazy var filterView: AccessibleCollectionView = {
+        let collectionView = AccessibleCollectionView(
             frame: .zero,
             collectionViewLayout: .init()
         )
@@ -58,12 +68,15 @@ class FilterController: UIViewController {
         collectionView.setCollectionViewLayout(layout, animated: true)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .clear
+        collectionView.accessibilityLabel = "Filtros"
+        collectionView.shouldGroupAccessibilityChildren = true
         return collectionView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
+        filterView.contentInset.left = UIScreen.main.bounds.width/18
         filterViewConstraints()
 //        accessibilityElements = [self]
 //        filterView.accessibilityLabel = "Filtragem por Categoria"
@@ -98,7 +111,6 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let currentTag = tags[indexPath.row]
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         cell.label.text = currentTag.name
         cell.backgroundFilterView.backgroundColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1) : .clear
@@ -106,7 +118,7 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         cell.layer.borderColor = currentTag.isSelected ? UIColor(red: 123/255, green: 97/255, blue: 255/255, alpha: 1).cgColor : UIColor(red: 203/255, green: 192/255, blue: 255/255, alpha: 1).cgColor
         cell.isAccessibilityElement = true
         if tags[indexPath.row].isSelected {
-            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Selecionado"
+            cell.accessibilityHint = "Filtro \(tags[indexPath.row].name)  Selecionado"
         } else {
             cell.accessibilityHint = "Filtro \(tags[indexPath.row].name) Deselecionado"
         }
@@ -114,6 +126,7 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let feedback = UISelectionFeedbackGenerator()
         let selectedTag = tags[indexPath.row]
         selectedTag.isSelected.toggle()
         for tag in tags {
@@ -126,9 +139,11 @@ extension FilterController: UICollectionViewDelegate, UICollectionViewDataSource
         if selectedTag.isSelected {
             delegate?.getFilterByCategory(with: selectedTag.name)
             searchDismissDelegate?.dismissSearchEdit(with: selectedTag.name)
+            feedback.selectionChanged()
         } else {
             delegate?.getFilterByCategory(with: nil)
         }
+        SoundManager.instance.playSound(with: "tapSound")
     }
 
     func foo() {

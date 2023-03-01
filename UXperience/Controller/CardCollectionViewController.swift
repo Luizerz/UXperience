@@ -33,7 +33,6 @@ class CardCollectionViewController: UIViewController {
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.backgroundColor = .none
         collectionView.showsVerticalScrollIndicator = false
-        
         return collectionView
     }()
 
@@ -41,6 +40,11 @@ class CardCollectionViewController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         cardSetViewContratins()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        cardView.reloadData()
     }
 
     private func addSubViews() {
@@ -67,10 +71,10 @@ extension CardCollectionViewController: UICollectionViewDelegate, UICollectionVi
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(viewModel.uxLaws[indexPath.row].titulo) // selecionador da collection
+        SoundManager.instance.playSound(with: "tapCardSound")
         let feedBack = UISelectionFeedbackGenerator()
         feedBack.selectionChanged()
         delegate?.navigateTo(with: viewModel.uxLaws[indexPath.row])
-
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

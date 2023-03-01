@@ -13,6 +13,8 @@ public struct SwiftUIView: View {
     @State private var frontCardAmount = 0.0
     @State private var backCardAmount = 90.0
     @State private var isFlipped: Bool = true
+    @AccessibilityFocusState private var accessibilityFocusFront: Bool
+    @AccessibilityFocusState private var accessibilityFocusBack: Bool
 
     public var textFrontCard: String?
     public var titleFrontCard: String?
@@ -49,11 +51,21 @@ public struct SwiftUIView: View {
     public var body: some View {
         ZStack{
             frontCard(isFlipped: $isFlipped, animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
+                .accessibilityFocused($accessibilityFocusFront)
             backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
+                .accessibilityFocused($accessibilityFocusBack)
         }
         .ignoresSafeArea()
+        .onAppear {
+            print("apareceu")
+            accessibilityFocusFront = true
+            accessibilityFocusBack = false
+        }
         .onTapGesture {
             flipCard()
+            accessibilityFocusFront.toggle()
+            accessibilityFocusBack.toggle()
+            print(accessibilityFocusBack, accessibilityFocusFront)
         }
         .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onEnded(
@@ -156,6 +168,7 @@ public struct newView: View {
                             Text(stringText ?? "Error ao inicializar a stringText \(#function)")
                                 .font(Font.system(size: 16, weight: .medium))
                                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                                .accessibilityLabel(Text("Explicação da lei: " + stringText!))
                             Spacer()
                         }
                         Spacer()
@@ -163,8 +176,10 @@ public struct newView: View {
                             Spacer()
                             Image("flipLogo")
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 15))
-                                .accessibilityLabel(Text("Botão de girar o card."))
+                                .accessibilityLabel(Text("Girar o card."))
                                 .accessibilityHint(Text("Toque duas vezes na tela para girar o card e tenha um exemplo prático da lei."))
+                                .accessibilityRemoveTraits(.isImage)
+                                .accessibilityAddTraits(.isButton)
                         }
                     }
                     .accessibilityHidden(!flipped)

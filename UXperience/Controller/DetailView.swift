@@ -71,14 +71,12 @@ class DetailView: UIView {
         self.addSubview(swiftUIView)
         self.addSubview(titleLabel)
         self.addSubview(tableView)
-
         NSLayoutConstraint.activate([
             swiftUIView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            swiftUIView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.5),
+            swiftUIView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.4),
             swiftUIView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
 
-
-            titleLabel.topAnchor.constraint(equalTo: swiftUIView.bottomAnchor, constant: 17),
+            titleLabel.topAnchor.constraint(equalTo: swiftUIView.bottomAnchor, constant: 15),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 27),
 
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),

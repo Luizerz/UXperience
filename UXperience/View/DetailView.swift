@@ -22,7 +22,7 @@ class DetailView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Leia mais: "
+        label.text = "Leia mais"
         label.textColor = UIColor(named: "newsTitleColor")
         return label
     }()

@@ -68,7 +68,7 @@
         "resumo":"As melhores formas de se utilizar da lei Limiar de Doherty é tendo maneiras de lidar com atrasos, como por exemplo utilizar animações durante um processo demorado (>400ms). Barras de progressão são ótimas práticas como feedback para o usuário, ajudando a deixar a demora tolerável. Outro ponto importante que deve-se levar em consideração é o desempenho percebido, o qual é uma forma de trazer a sensação de que a execução do software foi mais rápida do que aparenta.",
         "leiaMais":"https://jlelliotton.blogspot.ca/p/the-economic-value-of-rapid-response.html",
         "asset":"Limiar_De_Doherty",
-        "exemplo":"fitts",
+        "exemplo":"dohertyImage0",
         "descrição_exemplo":"Gif representando uma caixa de diálogo com botões de ação. Há uma pergunta “Deseja salvar seu projeto?”. Em seguida, há um botão vazado à esquerda para “Cancelar” e, à direita, um botão preenchido para “Salvar”. O botão de Salvar é clicado e uma animação de confirmação aparece imediatamente na tela."
         
     },
@@ -85,7 +85,7 @@
         "categoria":"princípio",
         "titulo":"Princípio de Pareto",
         "resumo":"O princípio de Pareto afirma que, para muitos eventos, cerca de 80% dos efeitos vêm de 20% das causas. - As entradas e saídas geralmente não são distribuídas uniformemente. - Um grande grupo pode conter apenas alguns contribuintes significativos para o resultado desejado. - Concentre a maior parte do esforço nas áreas que trarão os maiores benefícios para a maioria dos usuários. O Princípio de Pareto é utilizado para direcionar um foco específico. Dessa forma, cerca de 80% dos efeitos vêm de 20% das causas.",
-        "leiaMais":"https://medium.com/togdesign/o-princ%C3%ADpio-de-pareto-e-ux-design-como-não-esquecer-dos-80-20-e559892ee86",
+        "leiaMais":"https://shre.ink/cok0",
         "asset":"Principio_De_Pareto",
         "exemplo":"pareto",
         "descrição_exemplo":"Exemplo de botões de ação. Botão esquerdo “Recentes” com um ícone de relógio acima do título. Botão do meio “Compartilhado” com um ícone de pasta e perfil acima do título. Botão direito “Explorar” com ícone de pasta acima do título."

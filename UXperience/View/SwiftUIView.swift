@@ -20,6 +20,7 @@ public struct SwiftUIView: View {
     public var titleFrontCard: String?
     public var imageURL: String?
     public var exemploURL: String?
+    public var accessibilityImageDescription: String?
 
     private func flipCard () {
         isFlipped = !isFlipped
@@ -52,7 +53,7 @@ public struct SwiftUIView: View {
         ZStack{
             frontCard(isFlipped: $isFlipped, animationAmount: $frontCardAmount, text: textFrontCard ?? "Error Text", title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon")
                 .accessibilityFocused($accessibilityFocusFront)
-            backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error")
+            backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error", accessibilityImageDescription: accessibilityImageDescription ?? "Error na descricao da Imagem")
                 .accessibilityFocused($accessibilityFocusBack)
         }
         .ignoresSafeArea()
@@ -101,8 +102,9 @@ public struct backCard: View {
     var title: String
     var imageString: String
     var exemploString: String
+    var accessibilityImageDescription: String
     public var body: some View {
-        newView(flipped: $isFlipped, animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString)
+        newView(flipped: $isFlipped, animationAmount: animationAmount, isFront: false, stringTitle: title, imageString: imageString, exemploString: exemploString, accessibilityImageDescription: accessibilityImageDescription)
             .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0), perspective: 0.15)
     }
 
@@ -118,6 +120,7 @@ public struct newView: View {
     var stringTitle: String?
     var imageString: String?
     var exemploString: String?
+    var accessibilityImageDescription: String?
 
     let gradient = Gradient(
         colors: [
@@ -200,19 +203,32 @@ public struct newView: View {
                         .accessibilityLabel(Text("Verso do card. \(stringTitle!)"))
                         Spacer()
 
-                        Text("Boa Prática")
-                            .bold()
-                            .padding(35)
+                        VStack {
+                            Text("Boa Prática")
+                                .dynamicTypeSize(.xxxLarge)
+                                .bold()
+                                .padding(35)
+                            HStack {
+                                Spacer()
+                                Image(exemploString ?? "")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                Spacer()
+                            }
 
-
-                        Image(exemploString ?? "")
+                        }
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel("Boa prática: " + (accessibilityImageDescription ?? "Error Audio Descrição"))
+                        .accessibilityAddTraits(.isImage)
                         Spacer()
                         HStack{
                             Spacer()
                             Image("flipLogo")
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 15))
-                                .accessibilityLabel(Text("Botão de girar o card."))
-                                .accessibilityHint(Text("Toque duas vezes na tela para girar o card e voltar para a explicação."))
+                                .accessibilityLabel(Text("Girar o card."))
+                                .accessibilityHint(Text("Toque duas vezes na tela para girar o card e tenha um exemplo prático da lei."))
+                                .accessibilityRemoveTraits(.isImage)
+                                .accessibilityAddTraits(.isButton)
                         }
 
                     }

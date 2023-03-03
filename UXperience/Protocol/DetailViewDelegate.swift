@@ -14,4 +14,5 @@ protocol DetailViewDelegate: AnyObject {
     func setFrontCardText()-> String
     func setImageOfCard()-> String
     func setImageExemple()-> String
+    func setAccessibilityImageDescription()-> String
 }

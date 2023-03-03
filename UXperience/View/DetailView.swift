@@ -15,6 +15,7 @@ class DetailView: UIView {
     private var titleValue: String = ""
     private var imageURL: String = ""
     private var exempleURL: String = ""
+    private var accessibilityImageDescription: String = ""
 
 
 
@@ -54,6 +55,7 @@ class DetailView: UIView {
         titleValue = delegate.setFrontCardTitle()
         imageURL = delegate.setImageOfCard()
         exempleURL = delegate.setImageExemple()
+        accessibilityImageDescription = delegate.setAccessibilityImageDescription()
         setLayout()
     }
     private func setLayout() {
@@ -64,6 +66,7 @@ class DetailView: UIView {
             view.titleFrontCard = self.titleValue
             view.imageURL = self.imageURL
             view.exemploURL = self.exempleURL
+            view.accessibilityImageDescription = self.accessibilityImageDescription
             return view
         }.makeContentView()
 
@@ -85,6 +88,7 @@ class DetailView: UIView {
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
 
         ])
+        titleLabel.accessibilityTraits = .header
     }
 }
 
@@ -104,6 +108,8 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
 
         let myText = delegate!.titleOfNews()
         cell.configureNewsTitle(with: myText)
+        cell.accessibilityTraits = .link
+        cell.accessibilityHint = "Toque duas vezes para se redirecionar ao Safari."
 
         return cell
     }
@@ -111,6 +117,7 @@ extension DetailView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let url: String = delegate!.goToWebSite()
         print(indexPath) // -> selecao da news
+        print(url)
         if let url = URL(string: url) {
             UIApplication.shared.open(url)
             tableView.deselectRow(at: indexPath, animated: false)

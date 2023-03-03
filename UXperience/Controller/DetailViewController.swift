@@ -33,6 +33,11 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewDelegate {
+    func setAccessibilityImageDescription() -> String {
+        print(detailViewModel?.descrição_exemplo ?? "Error descricao")
+        return detailViewModel!.descrição_exemplo
+    }
+
     func setImageExemple() -> String {
         return detailViewModel!.exemplo
     }

@@ -199,7 +199,6 @@
 				4F7A219F292E3F2300000F05 /* FilterController.swift */,
 				4F7A21A7292E53B400000F05 /* CardCollectionViewController.swift */,
 				4FBC3643292F92FD007044F9 /* DetailViewController.swift */,
-				4FBC3645292F932C007044F9 /* DetailView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				4F39C831292CFF8200DDD8AE /* Main.storyboard */,
+				4FBC3645292F932C007044F9 /* DetailView.swift */,
 				4F7A21A9292E596200000F05 /* FilterCollectionViewCell.swift */,
 				4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */,
 				4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */,
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
@@ -629,6 +629,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = PPSYB39C6H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UXperience/Info.plist;
@@ -663,6 +664,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -213,6 +213,7 @@ public struct newView: View {
                                 Image(exemploString ?? "")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
+                                    .padding(EdgeInsets(top: 10, leading: 30, bottom: 20, trailing: 30))
                                 Spacer()
                             }
 

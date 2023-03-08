@@ -173,8 +173,8 @@
     },
     {
         "categoria":"Viés Cognitivo",
-        "titulo":"Efeito de von Restorff",
-        "resumo":"O Efeito de von Restorff, também conhecido como Efeito de Isolamento, prevê que, quando vários objetos semelhantes estão presentes, aquele que difere do resto tem maior probabilidade de ser lembrado. A teoria foi definida pela psiquiatra e pediatra alemã Hedwig von Restorff. Em um estudo de 1933, von Restorff descobriu que, quando as pessoas recebiam uma lista de itens categoricamente semelhantes contendo um item distinto e isolado, a memória para este item específico foi melhorada.",
+        "titulo":"Efeito von Restorff",
+        "resumo":"O Efeito von Restorff, também conhecido como Efeito de Isolamento, prevê que, quando vários objetos semelhantes estão presentes, aquele que difere do resto tem maior probabilidade de ser lembrado. A teoria foi definida pela psiquiatra e pediatra alemã Hedwig von Restorff. Em um estudo de 1933, von Restorff descobriu que, quando as pessoas recebiam uma lista de itens categoricamente semelhantes contendo um item distinto e isolado, a memória para este item específico foi melhorada.",
         "leiaMais":"https://blog.marvelapp.com/psychology-principles-every-uiux-designer-needs-know/",
         "asset":"Efeito_Von_Restorff",
         "exemplo":"vonRestorff",

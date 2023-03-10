@@ -55,6 +55,11 @@ public struct SwiftUIView: View {
                 .accessibilityFocused($accessibilityFocusFront)
             backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error", accessibilityImageDescription: accessibilityImageDescription ?? "Error na descricao da Imagem")
                 .accessibilityFocused($accessibilityFocusBack)
+                .onAppear() {
+                    Task {
+                        await API.getDailyLaw()
+                    }
+                }
         }
         .ignoresSafeArea()
         .onAppear {

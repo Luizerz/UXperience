@@ -55,11 +55,6 @@ public struct SwiftUIView: View {
                 .accessibilityFocused($accessibilityFocusFront)
             backCard(isFlipped: $isFlipped, animationAmount: $backCardAmount, title: titleFrontCard ?? "Error Title", imageString: imageURL ?? "UXperience_icon", exemploString: exemploURL ?? "Error", accessibilityImageDescription: accessibilityImageDescription ?? "Error na descricao da Imagem")
                 .accessibilityFocused($accessibilityFocusBack)
-                .onAppear() {
-                    Task {
-                        await API.getDailyLaw()
-                    }
-                }
         }
         .ignoresSafeArea()
         .onAppear {
@@ -215,9 +210,21 @@ public struct newView: View {
                                 .padding(35)
                             HStack {
                                 Spacer()
-                                Image(exemploString ?? "")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                                if stringTitle == "Limiar de Doherty" {
+                                    HStack{
+                                        Spacer()
+                                        AnimationView()
+                                            .scaledToFit()
+                                        Spacer()
+                                    }
+                                }
+
+                                else {
+                                    Image(exemploString ?? "")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
+
                                 Spacer()
                             }
 

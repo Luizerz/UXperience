@@ -94,7 +94,7 @@
         "categoria":"princípio",
         "titulo":"Lei de Postel",
         "resumo":"Seja liberal no que você aceita e conservador no que você envia. Seja flexível e tolerante com as várias ações que a pessoa que usa seu aplicativo possa tomar. Quanto melhor planejado o design, mais resiliente neste sentido ele será. Seu aplicativo deve aceitar inserções e entradas variáveis das pessoas que o utilizam, adaptando-as para atender a suas necessidades. Defina limites para o que as pessoas podem inserir e forneça feedbacks claros. Para que as pessoas tenham uma experiência positiva, a interface deve ser empática, flexível e tolerante para cada ação que elas podem tomar.",
-        "leiaMais":"https://markboulton.co.uk/journal/2016-05-17.design-systems-and-postels-law/",
+        "leiaMais":"https://adactio.com/journal/14327",
         "asset":"Lei_De_Postel",
         "exemplo":"postel",
         "descrição_exemplo":"Exemplo de mensagem de erro. Ops… Algo deu errado! Não conseguimos localizar a página que está procurando. Por favor, tente novamente mais tarde!"

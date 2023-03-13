@@ -35,6 +35,8 @@
 		4F8BBB3D29AE4E010047FAE7 /* tapCardSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F8BBB3C29AE4E010047FAE7 /* tapCardSound.mp3 */; };
 		4F8E8B3629B9307400AF4D4F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D2CC129B92B5100A9AE8B /* API.swift */; };
 		4F8E8B3729B9629100AF4D4F /* DailyLawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E8B3429B92C1200AF4D4F /* DailyLawModel.swift */; };
+		4F9AF7F129BBAD0500C032B1 /* dohertyImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF7F029BBAD0500C032B1 /* dohertyImage.gif */; };
+		4F9AF7F329BBAD3200C032B1 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF7F229BBAD3200C032B1 /* AnimationView.swift */; };
 		4FBC3644292F92FD007044F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3643292F92FD007044F9 /* DetailViewController.swift */; };
 		4FBC3646292F932C007044F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3645292F932C007044F9 /* DetailView.swift */; };
 		4FBC3649292FA6AA007044F9 /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */; };
@@ -50,6 +52,7 @@
 		4FC3255B29B60B5B007CF956 /* DailyLawWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4FC3254629B60B5A007CF956 /* DailyLawWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FE6B96D29BA7B88009BF519 /* DailyLawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E8B3429B92C1200AF4D4F /* DailyLawModel.swift */; };
 		4FE6B96E29BA7B8B009BF519 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D2CC129B92B5100A9AE8B /* API.swift */; };
+		4FE8BA1729BF4A6B000FB8A3 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8BA1629BF4A6B000FB8A3 /* GIF.swift */; };
 		A16F663E2934DEEA001D2796 /* LawsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F663D2934DEEA001D2796 /* LawsModel.swift */; };
 		D12241D429378ED200A59DCC /* ReadJsonLaws.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12241D329378ED200A59DCC /* ReadJsonLaws.swift */; };
 		D19DE0482930DF490090324B /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DE0462930DF490090324B /* CardCollectionViewCell.swift */; };
@@ -130,6 +133,8 @@
 		4F8BBB3C29AE4E010047FAE7 /* tapCardSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tapCardSound.mp3; sourceTree = "<group>"; };
 		4F8D2CC129B92B5100A9AE8B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4F8E8B3429B92C1200AF4D4F /* DailyLawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLawModel.swift; sourceTree = "<group>"; };
+		4F9AF7F029BBAD0500C032B1 /* dohertyImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dohertyImage.gif; sourceTree = "<group>"; };
+		4F9AF7F229BBAD3200C032B1 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		4FBC3643292F92FD007044F9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FBC3645292F932C007044F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4FBC3647292FA6AA007044F9 /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		4FC3255329B60B5B007CF956 /* DailyLawWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DailyLawWidget.intentdefinition; sourceTree = "<group>"; };
 		4FC3255429B60B5B007CF956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FC3255629B60B5B007CF956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE8BA1629BF4A6B000FB8A3 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		A16F663D2934DEEA001D2796 /* LawsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawsModel.swift; sourceTree = "<group>"; };
 		D12241D329378ED200A59DCC /* ReadJsonLaws.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadJsonLaws.swift; sourceTree = "<group>"; };
 		D19DE0462930DF490090324B /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -244,7 +250,9 @@
 			isa = PBXGroup;
 			children = (
 				4F39C82B292CFF8200DDD8AE /* AppDelegate.swift */,
+				4F9AF7F029BBAD0500C032B1 /* dohertyImage.gif */,
 				4F39C82D292CFF8200DDD8AE /* SceneDelegate.swift */,
+				4FE8BA1629BF4A6B000FB8A3 /* GIF.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				4F39C831292CFF8200DDD8AE /* Main.storyboard */,
 				4FBC3645292F932C007044F9 /* DetailView.swift */,
 				4F7A21A9292E596200000F05 /* FilterCollectionViewCell.swift */,
+				4F9AF7F229BBAD3200C032B1 /* AnimationView.swift */,
 				4F7A21AA292E596200000F05 /* FilterCollectionViewCell.xib */,
 				4F7A21AD292E5B5600000F05 /* MainScreenViewController+ViewCode.swift */,
 				D19DE0462930DF490090324B /* CardCollectionViewCell.swift */,
@@ -500,6 +509,7 @@
 				D19DE0492930DF490090324B /* CardCollectionViewCell.xib in Resources */,
 				4F7A21AC292E596200000F05 /* FilterCollectionViewCell.xib in Resources */,
 				4F8BBB3B29AE47800047FAE7 /* tapSound.mp3 in Resources */,
+				4F9AF7F129BBAD0500C032B1 /* dohertyImage.gif in Resources */,
 				4F8BBB3D29AE4E010047FAE7 /* tapCardSound.mp3 in Resources */,
 				4F57837C2934DC6600F01DDA /* cardFlipSound.mp3 in Resources */,
 				4F39C838292CFF8300DDD8AE /* Assets.xcassets in Resources */,
@@ -552,6 +562,7 @@
 				4F39C82C292CFF8200DDD8AE /* AppDelegate.swift in Sources */,
 				4F7DC7022930DF29005A8184 /* SwiftUIView.swift in Sources */,
 				4F39C82E292CFF8200DDD8AE /* SceneDelegate.swift in Sources */,
+				4F9AF7F329BBAD3200C032B1 /* AnimationView.swift in Sources */,
 				4F7A21AB292E596200000F05 /* FilterCollectionViewCell.swift in Sources */,
 				4FE6B96D29BA7B88009BF519 /* DailyLawModel.swift in Sources */,
 				4F1325AC293E13BD006E5800 /* DetailViewDelegate.swift in Sources */,
@@ -559,6 +570,7 @@
 				496825FE293E3E4E0052EC3D /* FilterCollectionViewDelegate.swift in Sources */,
 				4F7A21AE292E5B5600000F05 /* MainScreenViewController+ViewCode.swift in Sources */,
 				4FE6B96E29BA7B8B009BF519 /* API.swift in Sources */,
+				4FE8BA1729BF4A6B000FB8A3 /* GIF.swift in Sources */,
 				4F7DC70429310BAF005A8184 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,7 +804,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -828,7 +840,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

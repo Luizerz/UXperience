@@ -210,6 +210,7 @@ public struct newView: View {
                                 .padding(35)
                             HStack {
                                 Spacer()
+
                                 if stringTitle == "Limiar de Doherty" {
                                     HStack{
                                         Spacer()
@@ -224,7 +225,6 @@ public struct newView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                 }
-
                                 Spacer()
                             }
 

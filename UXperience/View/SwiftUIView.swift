@@ -210,10 +210,21 @@ public struct newView: View {
                                 .padding(35)
                             HStack {
                                 Spacer()
-                                Image(exemploString ?? "")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(EdgeInsets(top: 10, leading: 30, bottom: 20, trailing: 30))
+
+                                if stringTitle == "Limiar de Doherty" {
+                                    HStack{
+                                        Spacer()
+                                        AnimationView()
+                                            .scaledToFit()
+                                        Spacer()
+                                    }
+                                }
+
+                                else {
+                                    Image(exemploString ?? "")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
                                 Spacer()
                             }
 
